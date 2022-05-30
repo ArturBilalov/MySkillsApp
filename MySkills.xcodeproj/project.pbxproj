@@ -13,6 +13,7 @@
 		FEEE132C2844FF78003344FD /* MySkills.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = FEEE132A2844FF78003344FD /* MySkills.xcdatamodeld */; };
 		FEEE132E2844FF7A003344FD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FEEE132D2844FF7A003344FD /* Assets.xcassets */; };
 		FEEE13312844FF7A003344FD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FEEE132F2844FF7A003344FD /* LaunchScreen.storyboard */; };
+		FEEE13392845010E003344FD /* TapBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEEE13382845010E003344FD /* TapBarController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		FEEE132D2844FF7A003344FD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FEEE13302844FF7A003344FD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FEEE13322844FF7A003344FD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FEEE13382845010E003344FD /* TapBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TapBarController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +58,7 @@
 		FEEE13202844FF78003344FD /* MySkills */ = {
 			isa = PBXGroup;
 			children = (
+				FEEE133A28450119003344FD /* ViewControllers */,
 				FEEE13212844FF78003344FD /* AppDelegate.swift */,
 				FEEE13232844FF78003344FD /* SceneDelegate.swift */,
 				FEEE13252844FF78003344FD /* ViewController.swift */,
@@ -65,6 +68,14 @@
 				FEEE132A2844FF78003344FD /* MySkills.xcdatamodeld */,
 			);
 			path = MySkills;
+			sourceTree = "<group>";
+		};
+		FEEE133A28450119003344FD /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				FEEE13382845010E003344FD /* TapBarController.swift */,
+			);
+			path = ViewControllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -138,6 +149,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FEEE13262844FF78003344FD /* ViewController.swift in Sources */,
+				FEEE13392845010E003344FD /* TapBarController.swift in Sources */,
 				FEEE132C2844FF78003344FD /* MySkills.xcdatamodeld in Sources */,
 				FEEE13222844FF78003344FD /* AppDelegate.swift in Sources */,
 				FEEE13242844FF78003344FD /* SceneDelegate.swift in Sources */,
