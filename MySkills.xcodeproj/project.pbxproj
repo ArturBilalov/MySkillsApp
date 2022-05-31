@@ -15,6 +15,8 @@
 		FEEE13392845010E003344FD /* TapBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEEE13382845010E003344FD /* TapBarController.swift */; };
 		FEEE133C2845064F003344FD /* EasySkillsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEEE133B2845064F003344FD /* EasySkillsViewController.swift */; };
 		FEEE133E2845066A003344FD /* LogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEEE133D2845066A003344FD /* LogInViewController.swift */; };
+		FEEE134028460133003344FD /* Information.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEEE133F28460133003344FD /* Information.swift */; };
+		FEEE134328461C4E003344FD /* SecondEasySkillsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEEE134228461C4E003344FD /* SecondEasySkillsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +30,8 @@
 		FEEE13382845010E003344FD /* TapBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TapBarController.swift; sourceTree = "<group>"; };
 		FEEE133B2845064F003344FD /* EasySkillsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EasySkillsViewController.swift; sourceTree = "<group>"; };
 		FEEE133D2845066A003344FD /* LogInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInViewController.swift; sourceTree = "<group>"; };
+		FEEE133F28460133003344FD /* Information.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Information.swift; sourceTree = "<group>"; };
+		FEEE134228461C4E003344FD /* SecondEasySkillsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondEasySkillsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -44,6 +48,7 @@
 		FEEE13152844FF78003344FD = {
 			isa = PBXGroup;
 			children = (
+				FEEE134128460136003344FD /* Core */,
 				FEEE13202844FF78003344FD /* MySkills */,
 				FEEE131F2844FF78003344FD /* Products */,
 			);
@@ -77,8 +82,17 @@
 			children = (
 				FEEE133B2845064F003344FD /* EasySkillsViewController.swift */,
 				FEEE133D2845066A003344FD /* LogInViewController.swift */,
+				FEEE134228461C4E003344FD /* SecondEasySkillsViewController.swift */,
 			);
 			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		FEEE134128460136003344FD /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				FEEE133F28460133003344FD /* Information.swift */,
+			);
+			path = Core;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -152,10 +166,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				FEEE13392845010E003344FD /* TapBarController.swift in Sources */,
+				FEEE134028460133003344FD /* Information.swift in Sources */,
 				FEEE133C2845064F003344FD /* EasySkillsViewController.swift in Sources */,
 				FEEE133E2845066A003344FD /* LogInViewController.swift in Sources */,
 				FEEE132C2844FF78003344FD /* MySkills.xcdatamodeld in Sources */,
 				FEEE13222844FF78003344FD /* AppDelegate.swift in Sources */,
+				FEEE134328461C4E003344FD /* SecondEasySkillsViewController.swift in Sources */,
 				FEEE13242844FF78003344FD /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
