@@ -26,6 +26,11 @@
 		FEEE135328464515003344FD /* Setupable.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEEE135228464515003344FD /* Setupable.swift */; };
 		FEEE135628464608003344FD /* ProfileHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEEE135528464608003344FD /* ProfileHeaderView.swift */; };
 		FEEE135828464832003344FD /* PostTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEEE135728464832003344FD /* PostTableViewCell.swift */; };
+		FEEE135B28464B56003344FD /* PhotosTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEEE135A28464B56003344FD /* PhotosTableViewCell.swift */; };
+		FEEE135D28464B74003344FD /* PhotoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEEE135C28464B74003344FD /* PhotoCell.swift */; };
+		FEEE135F28464BA4003344FD /* PhotosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEEE135E28464BA4003344FD /* PhotosViewController.swift */; };
+		FEEE136128464BBA003344FD /* ExpandedPhotoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEEE136028464BBA003344FD /* ExpandedPhotoCell.swift */; };
+		FEEE136328464BE2003344FD /* PhotosCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEEE136228464BE2003344FD /* PhotosCollectionViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -50,6 +55,11 @@
 		FEEE135228464515003344FD /* Setupable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Setupable.swift; sourceTree = "<group>"; };
 		FEEE135528464608003344FD /* ProfileHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileHeaderView.swift; sourceTree = "<group>"; };
 		FEEE135728464832003344FD /* PostTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostTableViewCell.swift; sourceTree = "<group>"; };
+		FEEE135A28464B56003344FD /* PhotosTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotosTableViewCell.swift; sourceTree = "<group>"; };
+		FEEE135C28464B74003344FD /* PhotoCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoCell.swift; sourceTree = "<group>"; };
+		FEEE135E28464BA4003344FD /* PhotosViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotosViewController.swift; sourceTree = "<group>"; };
+		FEEE136028464BBA003344FD /* ExpandedPhotoCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExpandedPhotoCell.swift; sourceTree = "<group>"; };
+		FEEE136228464BE2003344FD /* PhotosCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotosCollectionViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,11 +76,6 @@
 		FEEE13152844FF78003344FD = {
 			isa = PBXGroup;
 			children = (
-				FEEE135928464837003344FD /* Cells */,
-				FEEE135428464519003344FD /* Protocols */,
-				FEEE1351284644BB003344FD /* Views */,
-				FEEE134E28464474003344FD /* Models */,
-				FEEE134128460136003344FD /* Core */,
 				FEEE13202844FF78003344FD /* MySkills */,
 				FEEE131F2844FF78003344FD /* Products */,
 			);
@@ -87,8 +92,13 @@
 		FEEE13202844FF78003344FD /* MySkills */ = {
 			isa = PBXGroup;
 			children = (
-				FEEE13382845010E003344FD /* TapBarController.swift */,
+				FEEE135928464837003344FD /* Cells */,
+				FEEE135428464519003344FD /* Protocols */,
+				FEEE1351284644BB003344FD /* Views */,
+				FEEE134E28464474003344FD /* Models */,
+				FEEE134128460136003344FD /* Core */,
 				FEEE133A28450119003344FD /* ViewControllers */,
+				FEEE13382845010E003344FD /* TapBarController.swift */,
 				FEEE13212844FF78003344FD /* AppDelegate.swift */,
 				FEEE13232844FF78003344FD /* SceneDelegate.swift */,
 				FEEE132D2844FF7A003344FD /* Assets.xcassets */,
@@ -109,6 +119,7 @@
 				FEEE1346284624A9003344FD /* TrafficLightsViewController.swift */,
 				FEEE133D2845066A003344FD /* LogInViewController.swift */,
 				FEEE134828463DE4003344FD /* ProfileViewController.swift */,
+				FEEE135E28464BA4003344FD /* PhotosViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -133,6 +144,7 @@
 			isa = PBXGroup;
 			children = (
 				FEEE134F284644B5003344FD /* PostView.swift */,
+				FEEE136028464BBA003344FD /* ExpandedPhotoCell.swift */,
 				FEEE135528464608003344FD /* ProfileHeaderView.swift */,
 			);
 			path = Views;
@@ -150,6 +162,9 @@
 			isa = PBXGroup;
 			children = (
 				FEEE135728464832003344FD /* PostTableViewCell.swift */,
+				FEEE136228464BE2003344FD /* PhotosCollectionViewCell.swift */,
+				FEEE135A28464B56003344FD /* PhotosTableViewCell.swift */,
+				FEEE135C28464B74003344FD /* PhotoCell.swift */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -226,14 +241,19 @@
 			buildActionMask = 2147483647;
 			files = (
 				FEEE13392845010E003344FD /* TapBarController.swift in Sources */,
+				FEEE135F28464BA4003344FD /* PhotosViewController.swift in Sources */,
 				FEEE1347284624A9003344FD /* TrafficLightsViewController.swift in Sources */,
 				FEEE134028460133003344FD /* Information.swift in Sources */,
+				FEEE135B28464B56003344FD /* PhotosTableViewCell.swift in Sources */,
+				FEEE136128464BBA003344FD /* ExpandedPhotoCell.swift in Sources */,
 				FEEE134D28464461003344FD /* News.swift in Sources */,
 				FEEE133C2845064F003344FD /* EasySkillsViewController.swift in Sources */,
+				FEEE136328464BE2003344FD /* PhotosCollectionViewCell.swift in Sources */,
 				FEEE133E2845066A003344FD /* LogInViewController.swift in Sources */,
 				FEEE134528461F46003344FD /* AlertViewController.swift in Sources */,
 				FEEE135628464608003344FD /* ProfileHeaderView.swift in Sources */,
 				FEEE134928463DE4003344FD /* ProfileViewController.swift in Sources */,
+				FEEE135D28464B74003344FD /* PhotoCell.swift in Sources */,
 				FEEE132C2844FF78003344FD /* MySkills.xcdatamodeld in Sources */,
 				FEEE135328464515003344FD /* Setupable.swift in Sources */,
 				FEEE135828464832003344FD /* PostTableViewCell.swift in Sources */,

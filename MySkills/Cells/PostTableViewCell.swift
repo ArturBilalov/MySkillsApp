@@ -202,3 +202,16 @@ extension PostTableViewCell {
         delegate?.tapPosts(cell: self)
     }
 }
+
+extension PostTableViewCell: Setupable {
+    
+    func setup(with viewModel: ViewModelProtocol) {
+        guard let viewModel = viewModel as? ViewModel else {return}
+        
+        self.authorLAbel.text = viewModel.author
+        self.postImageView.image = UIImage(named: viewModel.image)
+        self.descriptionLabel.text = viewModel.description
+        self.likesLabel.text = "Likes: " + String(viewModel.likes)
+        self.viewsLabel.text = "Views: " + String(viewModel.views)
+    }
+}
