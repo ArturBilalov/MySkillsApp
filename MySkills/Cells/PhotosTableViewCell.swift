@@ -33,7 +33,7 @@ class PhotosTableViewCell: UITableViewCell {
     
     private lazy var photosLabel: UILabel = {
         let label = UILabel()
-        label.text = "Photos"
+        label.text = "Фильмография"
         label.backgroundColor = .clear
         label.textColor = .black
         label.font = UIFont.systemFont(ofSize: 24, weight: .bold)
@@ -86,7 +86,7 @@ class PhotosTableViewCell: UITableViewCell {
         self.backView.addSubview(photoCollectionView)
         activateConstraints()
         for i in 0...19 {
-            if let image = UIImage(named: "dog\(i)") {
+            if let image = UIImage(named: "orig-\(i)") {
                 images.append(image)
             }
         }

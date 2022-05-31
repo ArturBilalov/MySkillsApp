@@ -19,7 +19,11 @@ class LogInViewController: UIViewController, UITextFieldDelegate {
     
     private lazy var logoImageView: UIImageView = {
        let imageView = UIImageView()
-        imageView.image = UIImage(named: "logo")
+        imageView.image = UIImage(named: "orig")
+        imageView.layer.borderWidth = 3.0
+        imageView.layer.borderColor = UIColor.white.cgColor
+        imageView.layer.cornerRadius = 30
+        imageView.clipsToBounds = true
         imageView.translatesAutoresizingMaskIntoConstraints = false
         return imageView
     }()
@@ -106,7 +110,7 @@ class LogInViewController: UIViewController, UITextFieldDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.view.backgroundColor = .lightGray
-        self.navigationController?.navigationBar.isHidden = true
+        self.navigationController?.navigationBar.isHidden = false
         self.tabBarController?.tabBar.isHidden = false
         self.setUpView()
         self.tapGesture()
@@ -142,8 +146,8 @@ class LogInViewController: UIViewController, UITextFieldDelegate {
         let scrollViewLeftConstraint = self.scrollView.leftAnchor.constraint(equalTo: self.view.leftAnchor)
         
         let bottomLogoConstraint = self.logoImageView.bottomAnchor.constraint(equalTo: self.textFieldStackView.topAnchor, constant: -70)
-        let heightLogoConstraint = self.logoImageView.heightAnchor.constraint(equalToConstant: 100)
-        let widthLogoConstraint = self.logoImageView.widthAnchor.constraint(equalToConstant: 100)
+        let heightLogoConstraint = self.logoImageView.heightAnchor.constraint(equalToConstant: 150)
+        let widthLogoConstraint = self.logoImageView.widthAnchor.constraint(equalToConstant: 150)
         let centerXLogoConstraint = self.logoImageView.centerXAnchor.constraint(equalTo: self.scrollView.centerXAnchor)
         
         let stackViewCenterXConstraint = self.textFieldStackView.centerXAnchor.constraint(equalTo: self.scrollView.centerXAnchor)

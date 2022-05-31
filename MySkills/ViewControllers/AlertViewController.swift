@@ -28,7 +28,7 @@ class AlertViewController: UIViewController {
     
     private lazy var alertButton: UIButton = {
         let button = UIButton(type: .system)
-        button.setTitle("Показать алерт", for: .normal)
+        button.setTitle("ПОКАЗАТЬ АЛЕРТ", for: .normal)
         button.setTitleColor(.white, for: .normal)
         button.layer.cornerRadius = 4
         button.backgroundColor = .systemYellow

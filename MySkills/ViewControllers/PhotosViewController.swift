@@ -42,7 +42,7 @@ class PhotosViewController: UIViewController {
         self.view.addSubview(self.collectionView)
         
         for i in 0...19 {
-            if let image = UIImage(named: "dog\(i)") {
+            if let image = UIImage(named: "orig-\(i)") {
                 images.append(image)
             }
         }
