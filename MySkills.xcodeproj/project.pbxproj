@@ -19,6 +19,13 @@
 		FEEE134328461C4E003344FD /* SecondEasySkillsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEEE134228461C4E003344FD /* SecondEasySkillsViewController.swift */; };
 		FEEE134528461F46003344FD /* AlertViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEEE134428461F46003344FD /* AlertViewController.swift */; };
 		FEEE1347284624A9003344FD /* TrafficLightsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEEE1346284624A9003344FD /* TrafficLightsViewController.swift */; };
+		FEEE134928463DE4003344FD /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEEE134828463DE4003344FD /* ProfileViewController.swift */; };
+		FEEE134B28464430003344FD /* News.json in Resources */ = {isa = PBXBuildFile; fileRef = FEEE134A28464430003344FD /* News.json */; };
+		FEEE134D28464461003344FD /* News.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEEE134C28464461003344FD /* News.swift */; };
+		FEEE1350284644B5003344FD /* PostView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEEE134F284644B5003344FD /* PostView.swift */; };
+		FEEE135328464515003344FD /* Setupable.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEEE135228464515003344FD /* Setupable.swift */; };
+		FEEE135628464608003344FD /* ProfileHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEEE135528464608003344FD /* ProfileHeaderView.swift */; };
+		FEEE135828464832003344FD /* PostTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEEE135728464832003344FD /* PostTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +43,13 @@
 		FEEE134228461C4E003344FD /* SecondEasySkillsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondEasySkillsViewController.swift; sourceTree = "<group>"; };
 		FEEE134428461F46003344FD /* AlertViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertViewController.swift; sourceTree = "<group>"; };
 		FEEE1346284624A9003344FD /* TrafficLightsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrafficLightsViewController.swift; sourceTree = "<group>"; };
+		FEEE134828463DE4003344FD /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		FEEE134A28464430003344FD /* News.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = News.json; sourceTree = "<group>"; };
+		FEEE134C28464461003344FD /* News.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = News.swift; sourceTree = "<group>"; };
+		FEEE134F284644B5003344FD /* PostView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostView.swift; sourceTree = "<group>"; };
+		FEEE135228464515003344FD /* Setupable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Setupable.swift; sourceTree = "<group>"; };
+		FEEE135528464608003344FD /* ProfileHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileHeaderView.swift; sourceTree = "<group>"; };
+		FEEE135728464832003344FD /* PostTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,6 +66,10 @@
 		FEEE13152844FF78003344FD = {
 			isa = PBXGroup;
 			children = (
+				FEEE135928464837003344FD /* Cells */,
+				FEEE135428464519003344FD /* Protocols */,
+				FEEE1351284644BB003344FD /* Views */,
+				FEEE134E28464474003344FD /* Models */,
 				FEEE134128460136003344FD /* Core */,
 				FEEE13202844FF78003344FD /* MySkills */,
 				FEEE131F2844FF78003344FD /* Products */,
@@ -77,6 +95,7 @@
 				FEEE132F2844FF7A003344FD /* LaunchScreen.storyboard */,
 				FEEE13322844FF7A003344FD /* Info.plist */,
 				FEEE132A2844FF78003344FD /* MySkills.xcdatamodeld */,
+				FEEE134A28464430003344FD /* News.json */,
 			);
 			path = MySkills;
 			sourceTree = "<group>";
@@ -85,10 +104,11 @@
 			isa = PBXGroup;
 			children = (
 				FEEE133B2845064F003344FD /* EasySkillsViewController.swift */,
-				FEEE133D2845066A003344FD /* LogInViewController.swift */,
 				FEEE134228461C4E003344FD /* SecondEasySkillsViewController.swift */,
 				FEEE134428461F46003344FD /* AlertViewController.swift */,
 				FEEE1346284624A9003344FD /* TrafficLightsViewController.swift */,
+				FEEE133D2845066A003344FD /* LogInViewController.swift */,
+				FEEE134828463DE4003344FD /* ProfileViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -99,6 +119,39 @@
 				FEEE133F28460133003344FD /* Information.swift */,
 			);
 			path = Core;
+			sourceTree = "<group>";
+		};
+		FEEE134E28464474003344FD /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				FEEE134C28464461003344FD /* News.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		FEEE1351284644BB003344FD /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				FEEE134F284644B5003344FD /* PostView.swift */,
+				FEEE135528464608003344FD /* ProfileHeaderView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		FEEE135428464519003344FD /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				FEEE135228464515003344FD /* Setupable.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		FEEE135928464837003344FD /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				FEEE135728464832003344FD /* PostTableViewCell.swift */,
+			);
+			path = Cells;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -160,6 +213,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FEEE13312844FF7A003344FD /* LaunchScreen.storyboard in Resources */,
+				FEEE134B28464430003344FD /* News.json in Resources */,
 				FEEE132E2844FF7A003344FD /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -174,12 +228,18 @@
 				FEEE13392845010E003344FD /* TapBarController.swift in Sources */,
 				FEEE1347284624A9003344FD /* TrafficLightsViewController.swift in Sources */,
 				FEEE134028460133003344FD /* Information.swift in Sources */,
+				FEEE134D28464461003344FD /* News.swift in Sources */,
 				FEEE133C2845064F003344FD /* EasySkillsViewController.swift in Sources */,
 				FEEE133E2845066A003344FD /* LogInViewController.swift in Sources */,
 				FEEE134528461F46003344FD /* AlertViewController.swift in Sources */,
+				FEEE135628464608003344FD /* ProfileHeaderView.swift in Sources */,
+				FEEE134928463DE4003344FD /* ProfileViewController.swift in Sources */,
 				FEEE132C2844FF78003344FD /* MySkills.xcdatamodeld in Sources */,
+				FEEE135328464515003344FD /* Setupable.swift in Sources */,
+				FEEE135828464832003344FD /* PostTableViewCell.swift in Sources */,
 				FEEE13222844FF78003344FD /* AppDelegate.swift in Sources */,
 				FEEE134328461C4E003344FD /* SecondEasySkillsViewController.swift in Sources */,
+				FEEE1350284644B5003344FD /* PostView.swift in Sources */,
 				FEEE13242844FF78003344FD /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
