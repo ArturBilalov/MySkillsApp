@@ -38,20 +38,20 @@ class TapBarController: UITabBarController {
     }
     
     func setupTapBar() {
-//        let items: [TabBarItem] = [.easy, .hard]
-//        self.viewControllers = item.map({tabBarItem in
-//            switch tabBarItem {
-//            case .easy:
-//                return UINavigationController(rootViewController: EasySkillsViewController())
-//            case .hard:
-//                return UINavigationController(rootViewController: HardSkillsViewController())
-//            }
-//        })
-//        
-//        self.viewControllers?.enumerated().forEach({(index, vc) in
-//            vc.tabBarItem.title = items[index].title
-//            vc.tabBarItem.title = items[index].image
-//        })
+        let items: [TabBarItem] = [.easy, .hard]
+        self.viewControllers = items.map({tabBarItem in
+            switch tabBarItem {
+            case .easy:
+                return UINavigationController(rootViewController: EasySkillsViewController())
+            case .hard:
+                return UINavigationController(rootViewController: LogInViewController())
+            }
+        })
+        
+        self.viewControllers?.enumerated().forEach({(index, vc) in
+            vc.tabBarItem.title = items[index].title
+            vc.tabBarItem.image = items[index].image
+        })
     }
 
 }
