@@ -79,7 +79,7 @@ class AlertViewController: UIViewController {
         self.buttonStackView.addArrangedSubview(myButton)
         self.buttonStackView.addArrangedSubview(alertButton)
         
-        let labelStackViewTopConstraint = self.infoLabel4.topAnchor.constraint(equalTo: self.view.topAnchor, constant: 70)
+        let labelStackViewTopConstraint = self.infoLabel4.topAnchor.constraint(equalTo: self.view.topAnchor, constant: 90)
         let labelStackViewCenterXConstraint = self.infoLabel4.centerXAnchor.constraint(equalTo: self.view.centerXAnchor)
         let labelStackViewLeadingConstraint = self.infoLabel4.leadingAnchor.constraint(equalTo: self.view.leadingAnchor, constant: 16)
         let labelStackViewTrailingConstraint = self.infoLabel4.trailingAnchor.constraint(equalTo: self.view.trailingAnchor, constant: -16)
