@@ -24,7 +24,7 @@ class SecondEasySkillsViewController: UIViewController {
         return label
     }()
     
-    private lazy var myButton: UIButton = {
+    private lazy var myButton1: UIButton = {
         let button = UIButton()
         button.setTitle("Перейти к игре <<Cветофор>>", for: .normal)
         button.setTitleColor(.white, for: .normal)
@@ -34,7 +34,22 @@ class SecondEasySkillsViewController: UIViewController {
         button.layer.shadowOffset = CGSize(width: 4, height: 4)
         button.layer.shadowRadius = 4
         button.layer.shadowOpacity = 0.7
-        button.addTarget(self, action: #selector(self.didTapmyButton), for: .touchUpInside)
+        button.addTarget(self, action: #selector(self.didTapmyButton1), for: .touchUpInside)
+        button.translatesAutoresizingMaskIntoConstraints = false
+        return button
+    }()
+    
+    private lazy var myButton2: UIButton = {
+        let button = UIButton()
+        button.setTitle("Перейти к Калькулятору", for: .normal)
+        button.setTitleColor(.white, for: .normal)
+        button.layer.cornerRadius = 4
+        button.backgroundColor = .systemBlue
+        button.layer.shadowColor = UIColor.black.cgColor
+        button.layer.shadowOffset = CGSize(width: 4, height: 4)
+        button.layer.shadowRadius = 4
+        button.layer.shadowOpacity = 0.7
+        button.addTarget(self, action: #selector(self.didTapmyButton2), for: .touchUpInside)
         button.translatesAutoresizingMaskIntoConstraints = false
         return button
     }()
@@ -62,7 +77,8 @@ class SecondEasySkillsViewController: UIViewController {
     private func setUpView() {
         self.view.addSubview(stackView)
         self.stackView.addArrangedSubview(infoLabel3)
-        self.stackView.addArrangedSubview(myButton)
+        self.stackView.addArrangedSubview(myButton1)
+        self.stackView.addArrangedSubview(myButton2)
  
         
         let stackViewTopConstraint = self.stackView.topAnchor.constraint(equalTo: self.view.topAnchor, constant: 150)
@@ -80,13 +96,15 @@ class SecondEasySkillsViewController: UIViewController {
         self.navigationController?.pushViewController(alertVC, animated: false)
     }
     
-    @objc func didTapmyButton() {
+    @objc func didTapmyButton1() {
         let trafficLightsVC = TrafficLightsViewController()
         self.navigationController?.pushViewController(trafficLightsVC, animated: false)
     }
     
-//    @objc private func didTapmyButton() {
-//    let secondEasySkillsVC = SecondEasySkillsViewController()
-//    self.navigationController?.pushViewController(secondEasySkillsVC, animated: false)
-//    }
+    @objc func didTapmyButton2() {
+        let calculatorVC1 = CalculatorViewController1()
+        self.navigationController?.pushViewController(calculatorVC1, animated: false)
+    }
+    
+
 }
