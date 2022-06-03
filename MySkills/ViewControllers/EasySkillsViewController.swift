@@ -13,8 +13,8 @@ class EasySkillsViewController: UIViewController {
     
     private lazy var titleLabel: UILabel = {
        let label = UILabel()
-        label.text = infoText.titleForEasySkillsViewController
-        label.textAlignment = .center
+        label.text = ""
+        label.textAlignment = .left
         label.layer.cornerRadius = 12
         label.textColor = .black
         label.font = UIFont(name: "HelveticaNeue-Bold", size: 25)

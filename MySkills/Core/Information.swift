@@ -23,6 +23,46 @@ class Information {
     var titleForEasySkillsVi9ewController: String = "My Skills Application"
     var titleForEasySkillsVie0wController: String = "My Skills Application"
     
+    var titleCalculatorViewConroller2: String = "Матрица судьбы"
+    
+    var n1Label: UILabel = {
+       let label = UILabel()
+        label.text = ""
+        label.textAlignment = .center
+        label.layer.cornerRadius = 12
+        label.textColor = .black
+        label.font = UIFont(name: "Helvetica-Regular", size: 7)
+        label.translatesAutoresizingMaskIntoConstraints = false
+        return label
+    }()
+    
+var labelStackView: UIStackView = {
+        let stackView = UIStackView()
+        stackView.translatesAutoresizingMaskIntoConstraints = false
+    stackView.backgroundColor = .lightGray
+        stackView.axis = .horizontal
+        stackView.distribution = .fillEqually
+        stackView.spacing = 5
+        stackView.layer.cornerRadius = 10
+        stackView.clipsToBounds = true
+        stackView.layer.borderWidth = 0.5
+        stackView.layer.borderColor = UIColor.lightGray.cgColor
+        return stackView
+    }()
+    
+var mainlabelStackView1: UIStackView = {
+        let stackView = UIStackView()
+        stackView.translatesAutoresizingMaskIntoConstraints = false
+        stackView.axis = .vertical
+        stackView.distribution = .fillEqually
+        stackView.spacing = 10
+        stackView.layer.cornerRadius = 10
+//        stackView.clipsToBounds = true
+//        stackView.layer.borderWidth = 0.5
+//        stackView.layer.borderColor = UIColor.lightGray.cgColor
+        return stackView
+    }()
+    
 }
 
 

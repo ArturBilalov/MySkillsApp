@@ -10,6 +10,10 @@ import UIKit
 class CalculatorViewController1: UIViewController {
     
     private lazy var infoText = Information()
+
+    
+    var nameInfo: String = ""
+    var dateInfo: String = ""
     
     private lazy var titleLabel: UILabel = {
        let label = UILabel()
@@ -24,6 +28,7 @@ class CalculatorViewController1: UIViewController {
     
     private lazy var datePicker: UIDatePicker = {
        let datePicker = UIDatePicker()
+        datePicker.isHidden = true
         datePicker.datePickerMode = .date
         datePicker.preferredDatePickerStyle = .wheels
         let localeID = Locale.preferredLanguages.first
@@ -51,7 +56,7 @@ class CalculatorViewController1: UIViewController {
         return textfield
     }()
     
-    private lazy var dateTextField: UITextField = {
+     lazy var dateTextField: UITextField = {
         let textfield = UITextField()
         textfield.backgroundColor = .systemGray6
         textfield.placeholder = "Введите дату рождения"
@@ -100,6 +105,24 @@ class CalculatorViewController1: UIViewController {
         self.view.backgroundColor = .lightGray
         self.navigationController?.navigationBar.isHidden = false
         self.tabBarController?.tabBar.isHidden = false
+        dateTextField.inputView = datePicker
+        datePicker.isHidden = false
+        toolBarSetup()
+        tapGesture()
+        setUpView()
+        dateInfoDelegate()
+ 
+
+    }
+    
+    private func tapGesture() {
+        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(tapGestureDone))
+        self.view.addGestureRecognizer(tapGesture)
+        
+    }
+    
+    
+    private func toolBarSetup() {
         let toolbar = UIToolbar()
         toolbar.sizeToFit()
         let doneButton = UIBarButtonItem(barButtonSystemItem: .done, target: self, action: #selector(doneAction))
@@ -108,50 +131,65 @@ class CalculatorViewController1: UIViewController {
         toolbar.setItems([flexSpace, doneButton], animated: true)
         
         dateTextField.inputAccessoryView = toolbar
-        
-        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(tapGestureDone))
-        self.view.addGestureRecognizer(tapGesture)
-        self.setUpView()
-
+    }
+    
+    private func dateInfoDelegate() {
+        nameInfo = nameTextField.text ?? "Вы не ввели своё имя"
+        dateInfo = dateTextField.text ?? "00/00/0000"
     }
     
     private func setUpView() {
         self.view.addSubview(titleLabel)
-        self.view.addSubview(datePicker)
+//        self.view.addSubview(datePicker)
         self.view.addSubview(calculatingButton)
         self.view.addSubview(textFieldStackView)
         self.textFieldStackView.addArrangedSubview(nameTextField)
         self.textFieldStackView.addArrangedSubview(dateTextField)
         
-        let scrollViewTopConstraint = self.scrollView.topAnchor.constraint(equalTo: self.view.topAnchor)
-        let scrollViewRightConstraint = self.scrollView.rightAnchor.constraint(equalTo: self.view.rightAnchor)
-        let scrollViewBottomConstraint = self.scrollView.bottomAnchor.constraint(equalTo: self.view.bottomAnchor)
-        let scrollViewLeftConstraint = self.scrollView.leftAnchor.constraint(equalTo: self.view.leftAnchor)
+//        let scrollViewTopConstraint = self.scrollView.topAnchor.constraint(equalTo: self.view.topAnchor)
+//        let scrollViewRightConstraint = self.scrollView.rightAnchor.constraint(equalTo: self.view.rightAnchor)
+//        let scrollViewBottomConstraint = self.scrollView.bottomAnchor.constraint(equalTo: self.view.bottomAnchor)
+//        let scrollViewLeftConstraint = self.scrollView.leftAnchor.constraint(equalTo: self.view.leftAnchor)
         
-        let bottomLogoConstraint = self.logoImageView.bottomAnchor.constraint(equalTo: self.textFieldStackView.topAnchor, constant: -70)
-        let heightLogoConstraint = self.logoImageView.heightAnchor.constraint(equalToConstant: 150)
-        let widthLogoConstraint = self.logoImageView.widthAnchor.constraint(equalToConstant: 150)
-        let centerXLogoConstraint = self.logoImageView.centerXAnchor.constraint(equalTo: self.scrollView.centerXAnchor)
+//        let bottomLogoConstraint = self.logoImageView.bottomAnchor.constraint(equalTo: self.textFieldStackView.topAnchor, constant: -70)
+//        let heightLogoConstraint = self.logoImageView.heightAnchor.constraint(equalToConstant: 150)
+//        let widthLogoConstraint = self.logoImageView.widthAnchor.constraint(equalToConstant: 150)
+//        let centerXLogoConstraint = self.logoImageView.centerXAnchor.constraint(equalTo: self.scrollView.centerXAnchor)
         
-        let stackViewCenterXConstraint = self.textFieldStackView.centerXAnchor.constraint(equalTo: self.scrollView.centerXAnchor)
-        let stackViewCenterYConstraint = self.textFieldStackView.centerYAnchor.constraint(equalTo: self.scrollView.centerYAnchor)
-        let stackViewLeadingConstraint = self.textFieldStackView.leadingAnchor.constraint(equalTo: self.scrollView.leadingAnchor, constant: 16)
-        let stackViewTrailingConstraint = self.textFieldStackView.trailingAnchor.constraint(equalTo: self.scrollView.trailingAnchor, constant: -16)
+        let titleTopConstraint = self.titleLabel.topAnchor.constraint(equalTo: self.view.topAnchor, constant: 90)
+//        let titleLeadingConstraint = self.titleLabel.leadingAnchor.constraint(equalTo: self.view.leadingAnchor, constant: 16)
+//        let titleTrailingConstraint = self.titleLabel.trailingAnchor.constraint(equalTo: self.view.trailingAnchor, constant: -16)
+        let titleCenterXConstraint = self.titleLabel.centerXAnchor.constraint(equalTo: self.view.centerXAnchor)
+
         
-        let infoTextFieldHeightAnchor = self.infoTextField.heightAnchor.constraint(equalToConstant: 50)
-        let passwordTextFieldHeightAnchor = self.passwordTextField.heightAnchor.constraint(equalToConstant: 50)
+        let stackViewCenterXConstraint = self.textFieldStackView.centerXAnchor.constraint(equalTo: self.view.centerXAnchor)
+        let stackViewTopConstraint = self.textFieldStackView.topAnchor.constraint(equalTo: self.titleLabel.bottomAnchor, constant: 50)
+
+//        let stackViewCenterYConstraint = self.textFieldStackView.centerYAnchor.constraint(equalTo: self.view.centerYAnchor)
+        let stackViewLeadingConstraint = self.textFieldStackView.leadingAnchor.constraint(equalTo: self.view.leadingAnchor, constant: 16)
+        let stackViewTrailingConstraint = self.textFieldStackView.trailingAnchor.constraint(equalTo: self.view.trailingAnchor, constant: -16)
         
-        let heightButtonConstraint = self.logInButton.heightAnchor.constraint(equalToConstant: 50)
-        let buttonTrailingConstraint = self.logInButton.trailingAnchor.constraint(equalTo: self.scrollView.trailingAnchor, constant: -16)
-        let buttonLeadingConstraint = self.logInButton.leadingAnchor.constraint(equalTo: self.scrollView.leadingAnchor, constant: 16)
-        self.topButtonConstraint = self.logInButton.topAnchor.constraint(equalTo: self.textFieldStackView.bottomAnchor, constant: 16)
-        self.topButtonConstraint?.priority = UILayoutPriority(rawValue: 999)
+        let nameFieldHeightAnchor = self.nameTextField.heightAnchor.constraint(equalToConstant: 50)
+        let dateTextFieldHeightAnchor = self.dateTextField.heightAnchor.constraint(equalToConstant: 50)
         
-        NSLayoutConstraint.activate([ scrollViewTopConstraint, scrollViewRightConstraint, scrollViewBottomConstraint, scrollViewLeftConstraint, heightLogoConstraint, widthLogoConstraint,  centerXLogoConstraint, bottomLogoConstraint, stackViewCenterXConstraint, stackViewCenterYConstraint, stackViewLeadingConstraint, stackViewTrailingConstraint, infoTextFieldHeightAnchor, passwordTextFieldHeightAnchor, heightButtonConstraint, self.topButtonConstraint, buttonLeadingConstraint,  buttonTrailingConstraint].compactMap( {$0} ))
+        let heightButtonConstraint = self.calculatingButton.heightAnchor.constraint(equalToConstant: 50)
+        let buttonTrailingConstraint = self.calculatingButton.trailingAnchor.constraint(equalTo: self.view.trailingAnchor, constant: -16)
+        let buttonLeadingConstraint = self.calculatingButton.leadingAnchor.constraint(equalTo: self.view.leadingAnchor, constant: 16)
+        let topButtonConstraint = self.calculatingButton.topAnchor.constraint(equalTo: self.textFieldStackView.bottomAnchor, constant: 50)
+//
+//        let datePickerXConstraint = self.datePicker.centerXAnchor.constraint(equalTo: self.view.centerXAnchor)
+//        let datePickerTrailingConstraint = self.datePicker.trailingAnchor.constraint(equalTo: self.view.trailingAnchor, constant: -16)
+//        let datePickerLeadingConstraint = self.datePicker.leadingAnchor.constraint(equalTo: self.view.leadingAnchor, constant: 16)
+//        let datePickerTopConstraint = self.datePicker.topAnchor.constraint(equalTo: self.calculatingButton.bottomAnchor, constant: 300)
+    
+        
+        NSLayoutConstraint.activate([titleTopConstraint, titleCenterXConstraint, stackViewCenterXConstraint, stackViewTopConstraint, stackViewLeadingConstraint, stackViewTrailingConstraint, nameFieldHeightAnchor, dateTextFieldHeightAnchor, heightButtonConstraint, buttonTrailingConstraint, buttonLeadingConstraint, topButtonConstraint].compactMap( {$0} ))
     }
     
+    //, datePickerXConstraint, datePickerTrailingConstraint, datePickerLeadingConstraint, datePickerTopConstraint
+    
     @objc func didTapCalculatingButton() {
-        let calculatorVC2 = CalculatorViewController2()
+        let calculatorVC2 = UIViewController(nibName: "CalculatorViewController2", bundle: nil)
         self.navigationController?.pushViewController(calculatorVC2, animated: false)
     }
     
