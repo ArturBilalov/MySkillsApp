@@ -8,6 +8,16 @@
 import UIKit
 
 class CalculatorViewController2: UIViewController {
+    private lazy var infoText = Information()
+    let infoFromCalculatorVC1 = CalculatorViewController1()
+    
+
+    
+    
+    override func viewDidLoad() {
+             super.viewDidLoad()
+        
+    }
     
     
 }
