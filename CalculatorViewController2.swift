@@ -8,6 +8,9 @@
 import UIKit
 
 class CalculatorViewController2: UIViewController {
+    
+    
+}
 
 //     private lazy var infoText = Information()
 //     
@@ -158,5 +161,5 @@ class CalculatorViewController2: UIViewController {
 //     
 //     
 //     
- }
+
      
