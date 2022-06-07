@@ -9,7 +9,7 @@ import UIKit
 
 class AlertViewController: UIViewController {
     
-    private lazy var infoText = Information()
+    private lazy var infoText = InformationText()
     
 
     private lazy var infoLabel4: UILabel = {

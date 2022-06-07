@@ -9,7 +9,7 @@ import UIKit
 
 class TrafficLightsViewController: UIViewController {
     
-    private lazy var infoText = Information()
+    private lazy var infoText = InformationText()
 
     private lazy var infoLabel3: UILabel = {
        let label = UILabel()

@@ -7,8 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		FE2FE3B4284F344700FB56CE /* CalculatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE2FE3B3284F344700FB56CE /* CalculatorView.swift */; };
-		FE36FD6B284A3B1000C1A220 /* CalculatorViewController2.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE36FD69284A3B1000C1A220 /* CalculatorViewController2.swift */; };
 		FEEE13222844FF78003344FD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEEE13212844FF78003344FD /* AppDelegate.swift */; };
 		FEEE13242844FF78003344FD /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEEE13232844FF78003344FD /* SceneDelegate.swift */; };
 		FEEE132C2844FF78003344FD /* MySkills.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = FEEE132A2844FF78003344FD /* MySkills.xcdatamodeld */; };
@@ -17,7 +15,7 @@
 		FEEE13392845010E003344FD /* TapBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEEE13382845010E003344FD /* TapBarController.swift */; };
 		FEEE133C2845064F003344FD /* EasySkillsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEEE133B2845064F003344FD /* EasySkillsViewController.swift */; };
 		FEEE133E2845066A003344FD /* LogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEEE133D2845066A003344FD /* LogInViewController.swift */; };
-		FEEE134028460133003344FD /* Information.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEEE133F28460133003344FD /* Information.swift */; };
+		FEEE134028460133003344FD /* InformationText.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEEE133F28460133003344FD /* InformationText.swift */; };
 		FEEE134328461C4E003344FD /* SecondEasySkillsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEEE134228461C4E003344FD /* SecondEasySkillsViewController.swift */; };
 		FEEE134528461F46003344FD /* AlertViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEEE134428461F46003344FD /* AlertViewController.swift */; };
 		FEEE1347284624A9003344FD /* TrafficLightsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEEE1346284624A9003344FD /* TrafficLightsViewController.swift */; };
@@ -33,12 +31,9 @@
 		FEEE135F28464BA4003344FD /* PhotosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEEE135E28464BA4003344FD /* PhotosViewController.swift */; };
 		FEEE136128464BBA003344FD /* ExpandedPhotoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEEE136028464BBA003344FD /* ExpandedPhotoCell.swift */; };
 		FEEE136328464BE2003344FD /* PhotosCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEEE136228464BE2003344FD /* PhotosCollectionViewCell.swift */; };
-		FEEE136528489173003344FD /* CalculatorViewController1.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEEE136428489173003344FD /* CalculatorViewController1.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		FE2FE3B3284F344700FB56CE /* CalculatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorView.swift; sourceTree = "<group>"; };
-		FE36FD69284A3B1000C1A220 /* CalculatorViewController2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorViewController2.swift; sourceTree = "<group>"; };
 		FEEE131E2844FF78003344FD /* MySkills.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MySkills.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FEEE13212844FF78003344FD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FEEE13232844FF78003344FD /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -49,7 +44,7 @@
 		FEEE13382845010E003344FD /* TapBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TapBarController.swift; sourceTree = "<group>"; };
 		FEEE133B2845064F003344FD /* EasySkillsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EasySkillsViewController.swift; sourceTree = "<group>"; };
 		FEEE133D2845066A003344FD /* LogInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInViewController.swift; sourceTree = "<group>"; };
-		FEEE133F28460133003344FD /* Information.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Information.swift; sourceTree = "<group>"; };
+		FEEE133F28460133003344FD /* InformationText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InformationText.swift; sourceTree = "<group>"; };
 		FEEE134228461C4E003344FD /* SecondEasySkillsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondEasySkillsViewController.swift; sourceTree = "<group>"; };
 		FEEE134428461F46003344FD /* AlertViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertViewController.swift; sourceTree = "<group>"; };
 		FEEE1346284624A9003344FD /* TrafficLightsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrafficLightsViewController.swift; sourceTree = "<group>"; };
@@ -65,7 +60,6 @@
 		FEEE135E28464BA4003344FD /* PhotosViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotosViewController.swift; sourceTree = "<group>"; };
 		FEEE136028464BBA003344FD /* ExpandedPhotoCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExpandedPhotoCell.swift; sourceTree = "<group>"; };
 		FEEE136228464BE2003344FD /* PhotosCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotosCollectionViewCell.swift; sourceTree = "<group>"; };
-		FEEE136428489173003344FD /* CalculatorViewController1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorViewController1.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -126,8 +120,6 @@
 				FEEE133D2845066A003344FD /* LogInViewController.swift */,
 				FEEE134828463DE4003344FD /* ProfileViewController.swift */,
 				FEEE135E28464BA4003344FD /* PhotosViewController.swift */,
-				FEEE136428489173003344FD /* CalculatorViewController1.swift */,
-				FE36FD69284A3B1000C1A220 /* CalculatorViewController2.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -135,7 +127,7 @@
 		FEEE134128460136003344FD /* Core */ = {
 			isa = PBXGroup;
 			children = (
-				FEEE133F28460133003344FD /* Information.swift */,
+				FEEE133F28460133003344FD /* InformationText.swift */,
 			);
 			path = Core;
 			sourceTree = "<group>";
@@ -152,7 +144,6 @@
 			isa = PBXGroup;
 			children = (
 				FEEE134F284644B5003344FD /* PostView.swift */,
-				FE2FE3B3284F344700FB56CE /* CalculatorView.swift */,
 				FEEE136028464BBA003344FD /* ExpandedPhotoCell.swift */,
 				FEEE135528464608003344FD /* ProfileHeaderView.swift */,
 			);
@@ -252,8 +243,7 @@
 				FEEE13392845010E003344FD /* TapBarController.swift in Sources */,
 				FEEE135F28464BA4003344FD /* PhotosViewController.swift in Sources */,
 				FEEE1347284624A9003344FD /* TrafficLightsViewController.swift in Sources */,
-				FEEE134028460133003344FD /* Information.swift in Sources */,
-				FE2FE3B4284F344700FB56CE /* CalculatorView.swift in Sources */,
+				FEEE134028460133003344FD /* InformationText.swift in Sources */,
 				FEEE135B28464B56003344FD /* PhotosTableViewCell.swift in Sources */,
 				FEEE136128464BBA003344FD /* ExpandedPhotoCell.swift in Sources */,
 				FEEE134D28464461003344FD /* News.swift in Sources */,
@@ -263,13 +253,11 @@
 				FEEE134528461F46003344FD /* AlertViewController.swift in Sources */,
 				FEEE135628464608003344FD /* ProfileHeaderView.swift in Sources */,
 				FEEE134928463DE4003344FD /* ProfileViewController.swift in Sources */,
-				FE36FD6B284A3B1000C1A220 /* CalculatorViewController2.swift in Sources */,
 				FEEE135D28464B74003344FD /* PhotoCell.swift in Sources */,
 				FEEE132C2844FF78003344FD /* MySkills.xcdatamodeld in Sources */,
 				FEEE135328464515003344FD /* Setupable.swift in Sources */,
 				FEEE135828464832003344FD /* PostTableViewCell.swift in Sources */,
 				FEEE13222844FF78003344FD /* AppDelegate.swift in Sources */,
-				FEEE136528489173003344FD /* CalculatorViewController1.swift in Sources */,
 				FEEE134328461C4E003344FD /* SecondEasySkillsViewController.swift in Sources */,
 				FEEE1350284644B5003344FD /* PostView.swift in Sources */,
 				FEEE13242844FF78003344FD /* SceneDelegate.swift in Sources */,

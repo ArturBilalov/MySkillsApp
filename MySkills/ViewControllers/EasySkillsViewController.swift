@@ -9,7 +9,7 @@ import UIKit
 
 class EasySkillsViewController: UIViewController {
     
-    private lazy var infoText = Information()
+    private lazy var infoText = InformationText()
     
     private lazy var titleLabel: UILabel = {
        let label = UILabel()
@@ -21,8 +21,6 @@ class EasySkillsViewController: UIViewController {
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
     }()
-    
-
     
     private lazy var infoLabel1: UILabel = {
        let label = UILabel()

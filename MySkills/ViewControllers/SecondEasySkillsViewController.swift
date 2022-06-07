@@ -9,7 +9,7 @@ import UIKit
 
 class SecondEasySkillsViewController: UIViewController {
     
-    private lazy var infoText = Information()
+    private lazy var infoText = InformationText()
     
     private lazy var infoLabel3: UILabel = {
        let label = UILabel()
@@ -39,20 +39,6 @@ class SecondEasySkillsViewController: UIViewController {
         return button
     }()
     
-    private lazy var myButton2: UIButton = {
-        let button = UIButton()
-        button.setTitle("Перейти к Калькулятору", for: .normal)
-        button.setTitleColor(.white, for: .normal)
-        button.layer.cornerRadius = 4
-        button.backgroundColor = .systemBlue
-        button.layer.shadowColor = UIColor.black.cgColor
-        button.layer.shadowOffset = CGSize(width: 4, height: 4)
-        button.layer.shadowRadius = 4
-        button.layer.shadowOpacity = 0.7
-        button.addTarget(self, action: #selector(self.didTapmyButton2), for: .touchUpInside)
-        button.translatesAutoresizingMaskIntoConstraints = false
-        return button
-    }()
     
     private lazy var stackView: UIStackView = {
         let stackView = UIStackView()
@@ -78,17 +64,13 @@ class SecondEasySkillsViewController: UIViewController {
         self.view.addSubview(stackView)
         self.stackView.addArrangedSubview(infoLabel3)
         self.stackView.addArrangedSubview(myButton1)
-        self.stackView.addArrangedSubview(myButton2)
- 
-        
+
         let stackViewTopConstraint = self.stackView.topAnchor.constraint(equalTo: self.view.topAnchor, constant: 150)
         let stackViewCenterXConstraint = self.stackView.centerXAnchor.constraint(equalTo: self.view.centerXAnchor)
         let stackViewLeadingConstraint = self.stackView.leadingAnchor.constraint(equalTo: self.view.leadingAnchor, constant: 16)
         let stackViewTrailingConstraint = self.stackView.trailingAnchor.constraint(equalTo: self.view.trailingAnchor, constant: -16)
-        
-        
-        NSLayoutConstraint.activate([stackViewTopConstraint, stackViewCenterXConstraint, stackViewLeadingConstraint, stackViewTrailingConstraint].compactMap( {$0} ))
 
+        NSLayoutConstraint.activate([stackViewTopConstraint, stackViewCenterXConstraint, stackViewLeadingConstraint, stackViewTrailingConstraint].compactMap( {$0} ))
     }
     
     @objc func didTapAlertButton() {
@@ -100,11 +82,4 @@ class SecondEasySkillsViewController: UIViewController {
         let trafficLightsVC = TrafficLightsViewController()
         self.navigationController?.pushViewController(trafficLightsVC, animated: false)
     }
-    
-    @objc func didTapmyButton2() {
-        let calculatorVC1 = CalculatorViewController1()
-        self.navigationController?.pushViewController(calculatorVC1, animated: false)
-    }
-    
-
 }
