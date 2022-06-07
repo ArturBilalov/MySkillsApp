@@ -13,7 +13,7 @@ class SecondEasySkillsViewController: UIViewController {
     
     private lazy var infoLabel3: UILabel = {
        let label = UILabel()
-        label.text = infoText.firstLabelForEasySkillsViewController1
+        label.text = infoText.labelForSecondEasySkillsViewController
         label.textAlignment = .natural
         label.lineBreakMode = .byWordWrapping
         label.numberOfLines = 0
@@ -54,6 +54,7 @@ class SecondEasySkillsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.view.backgroundColor = .lightGray
+        self.navigationController?.navigationBar.isHidden = false
         setUpView()
         
         let myButton = UIBarButtonItem(image: UIImage(systemName: "exclamationmark.triangle"), style: .plain, target: self, action: #selector(didTapAlertButton))

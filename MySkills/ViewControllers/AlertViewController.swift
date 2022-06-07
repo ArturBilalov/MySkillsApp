@@ -14,7 +14,7 @@ class AlertViewController: UIViewController {
 
     private lazy var infoLabel4: UILabel = {
        let label = UILabel()
-        label.text = infoText.firstLabelForEasySkillsViewController1
+        label.text = infoText.labelForAlertViewController
         label.textAlignment = .natural
         label.lineBreakMode = .byWordWrapping
         label.numberOfLines = 0
@@ -70,6 +70,7 @@ class AlertViewController: UIViewController {
         super.viewDidLoad()
         view.backgroundColor = .lightGray
         setUpView()
+        self.navigationController?.navigationBar.isHidden = true
     }
     
     

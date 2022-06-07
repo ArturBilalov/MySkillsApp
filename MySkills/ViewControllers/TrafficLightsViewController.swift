@@ -13,7 +13,7 @@ class TrafficLightsViewController: UIViewController {
 
     private lazy var infoLabel3: UILabel = {
        let label = UILabel()
-        label.text = infoText.firstLabelForEasySkillsViewController1
+        label.text = infoText.labelForTrafficLightsViewController
         label.textAlignment = .natural
         label.lineBreakMode = .byWordWrapping
         label.numberOfLines = 0
@@ -75,6 +75,8 @@ class TrafficLightsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .lightGray
+        self.navigationController?.navigationBar.isHidden = false
+        
         redLightLabel.alpha = 0.1
         yellowLightLabel.alpha = 0.1
         greenLightLabel.alpha = 0.1

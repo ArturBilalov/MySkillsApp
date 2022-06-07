@@ -13,8 +13,8 @@ class EasySkillsViewController: UIViewController {
     
     private lazy var titleLabel: UILabel = {
        let label = UILabel()
-        label.text = ""
-        label.textAlignment = .left
+        label.text = infoText.titleForEasySkillsViewController
+        label.textAlignment = .center
         label.layer.cornerRadius = 12
         label.textColor = .black
         label.font = UIFont(name: "HelveticaNeue-Bold", size: 25)
@@ -24,20 +24,20 @@ class EasySkillsViewController: UIViewController {
     
     private lazy var infoLabel1: UILabel = {
        let label = UILabel()
-        label.text = infoText.firstLabelForEasySkillsViewController1
-        label.textAlignment = .natural
+        label.text = infoText.firstLabelForEasySkillsViewController
+        label.textAlignment = .center
         label.lineBreakMode = .byWordWrapping
         label.numberOfLines = 0
         label.layer.cornerRadius = 12
         label.textColor = .black
-        label.font = UIFont(name: "Helvetica-Regular", size: 14)
+        label.font = UIFont(name: "HelveticaNeue-Bold", size: 18)
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
     }()
     
     private lazy var infoLabel2: UILabel = {
        let label = UILabel()
-        label.text = infoText.secondLabelForEasySkillsViewController2
+        label.text = infoText.secondLabelForEasySkillsViewController
         label.lineBreakMode = .byWordWrapping
         label.numberOfLines = 0
         label.textAlignment = .natural

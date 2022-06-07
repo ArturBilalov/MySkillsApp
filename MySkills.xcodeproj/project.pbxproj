@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FE2FE3BA284F7BF500FB56CE /* FirstDescriptionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE2FE3B9284F7BF500FB56CE /* FirstDescriptionViewController.swift */; };
 		FEEE13222844FF78003344FD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEEE13212844FF78003344FD /* AppDelegate.swift */; };
 		FEEE13242844FF78003344FD /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEEE13232844FF78003344FD /* SceneDelegate.swift */; };
 		FEEE132C2844FF78003344FD /* MySkills.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = FEEE132A2844FF78003344FD /* MySkills.xcdatamodeld */; };
@@ -34,6 +35,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		FE2FE3B9284F7BF500FB56CE /* FirstDescriptionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstDescriptionViewController.swift; sourceTree = "<group>"; };
 		FEEE131E2844FF78003344FD /* MySkills.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MySkills.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FEEE13212844FF78003344FD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FEEE13232844FF78003344FD /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -118,6 +120,7 @@
 				FEEE134428461F46003344FD /* AlertViewController.swift */,
 				FEEE1346284624A9003344FD /* TrafficLightsViewController.swift */,
 				FEEE133D2845066A003344FD /* LogInViewController.swift */,
+				FE2FE3B9284F7BF500FB56CE /* FirstDescriptionViewController.swift */,
 				FEEE134828463DE4003344FD /* ProfileViewController.swift */,
 				FEEE135E28464BA4003344FD /* PhotosViewController.swift */,
 			);
@@ -259,6 +262,7 @@
 				FEEE135828464832003344FD /* PostTableViewCell.swift in Sources */,
 				FEEE13222844FF78003344FD /* AppDelegate.swift in Sources */,
 				FEEE134328461C4E003344FD /* SecondEasySkillsViewController.swift in Sources */,
+				FE2FE3BA284F7BF500FB56CE /* FirstDescriptionViewController.swift in Sources */,
 				FEEE1350284644B5003344FD /* PostView.swift in Sources */,
 				FEEE13242844FF78003344FD /* SceneDelegate.swift in Sources */,
 			);

@@ -105,12 +105,23 @@ class LogInViewController: UIViewController, UITextFieldDelegate {
     return button
     }()
     
+    private lazy var descriptionButton: UIButton = {
+       let button = UIButton()
+        button.setTitle("открыть описание", for: .normal)
+        button.setTitleColor(.white, for: .normal)
+        button.layer.cornerRadius = 10
+        button.backgroundColor = .systemGray3
+        button.addTarget(self, action: #selector(self.didTapdescriptionButton), for: .touchUpInside)
+        button.translatesAutoresizingMaskIntoConstraints = false
+    return button
+    }()
+    
     private var topButtonConstraint: NSLayoutConstraint?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.view.backgroundColor = .lightGray
-        self.navigationController?.navigationBar.isHidden = false
+        self.navigationController?.navigationBar.isHidden = true
         self.tabBarController?.tabBar.isHidden = false
         self.setUpView()
         self.tapGesture()
@@ -135,6 +146,7 @@ class LogInViewController: UIViewController, UITextFieldDelegate {
     private func setUpView() {
         self.view.addSubview(scrollView)
         self.scrollView.addSubview(logoImageView)
+        self.scrollView.addSubview(descriptionButton)
         self.scrollView.addSubview(textFieldStackView)
         self.scrollView.addSubview(logInButton)
         self.textFieldStackView.addArrangedSubview(infoTextField)
@@ -150,6 +162,10 @@ class LogInViewController: UIViewController, UITextFieldDelegate {
         let widthLogoConstraint = self.logoImageView.widthAnchor.constraint(equalToConstant: 150)
         let centerXLogoConstraint = self.logoImageView.centerXAnchor.constraint(equalTo: self.scrollView.centerXAnchor)
         
+        let topDescriptionButtonConstraint = self.descriptionButton.topAnchor.constraint(equalTo: self.logoImageView.bottomAnchor, constant: 15)
+        let centerXDescriptionButtonConstraint = self.descriptionButton.centerXAnchor.constraint(equalTo: self.view.centerXAnchor)
+        let heightDescriptionButtonConstraint = self.descriptionButton.heightAnchor.constraint(equalToConstant: 25)
+        
         let stackViewCenterXConstraint = self.textFieldStackView.centerXAnchor.constraint(equalTo: self.scrollView.centerXAnchor)
         let stackViewCenterYConstraint = self.textFieldStackView.centerYAnchor.constraint(equalTo: self.scrollView.centerYAnchor)
         let stackViewLeadingConstraint = self.textFieldStackView.leadingAnchor.constraint(equalTo: self.scrollView.leadingAnchor, constant: 16)
@@ -164,7 +180,7 @@ class LogInViewController: UIViewController, UITextFieldDelegate {
         self.topButtonConstraint = self.logInButton.topAnchor.constraint(equalTo: self.textFieldStackView.bottomAnchor, constant: 16)
         self.topButtonConstraint?.priority = UILayoutPriority(rawValue: 999)
         
-        NSLayoutConstraint.activate([ scrollViewTopConstraint, scrollViewRightConstraint, scrollViewBottomConstraint, scrollViewLeftConstraint, heightLogoConstraint, widthLogoConstraint,  centerXLogoConstraint, bottomLogoConstraint, stackViewCenterXConstraint, stackViewCenterYConstraint, stackViewLeadingConstraint, stackViewTrailingConstraint, infoTextFieldHeightAnchor, passwordTextFieldHeightAnchor, heightButtonConstraint, self.topButtonConstraint, buttonLeadingConstraint,  buttonTrailingConstraint].compactMap( {$0} ))
+        NSLayoutConstraint.activate([ scrollViewTopConstraint, scrollViewRightConstraint, scrollViewBottomConstraint, scrollViewLeftConstraint, heightLogoConstraint, widthLogoConstraint,  centerXLogoConstraint, bottomLogoConstraint, stackViewCenterXConstraint, stackViewCenterYConstraint, stackViewLeadingConstraint, stackViewTrailingConstraint, infoTextFieldHeightAnchor, passwordTextFieldHeightAnchor, heightButtonConstraint, self.topButtonConstraint, buttonLeadingConstraint,  buttonTrailingConstraint, topDescriptionButtonConstraint, centerXDescriptionButtonConstraint, heightDescriptionButtonConstraint].compactMap( {$0} ))
     }
     
     private func tapGesture() {
@@ -188,6 +204,11 @@ class LogInViewController: UIViewController, UITextFieldDelegate {
             let emailTest = NSPredicate(format:"SELF MATCHES[c] %@", emailRegEx)
             return emailTest.evaluate(with: userEmail)
         }
+    
+    @objc private func didTapdescriptionButton() {
+        let descriptionVC = FirstDescriptionViewController()
+        self.navigationController?.pushViewController(descriptionVC, animated: false)
+    }
     
     @objc private func didTapLogInButton() {
         if logInButton.isSelected {
@@ -230,7 +251,7 @@ class LogInViewController: UIViewController, UITextFieldDelegate {
                     self.infoTextField.backgroundColor = .systemPink
                 } else if passwordTextField.text == "" {
                     self.passwordTextField.backgroundColor = .systemPink
-                } else if self.infoTextField.text == "a@mail.ru" && passwordTextField.text == "123456" {
+                } else if self.infoTextField.text == "adam@mail.ru" && passwordTextField.text == "123456" {
                     let profileVC = ProfileViewController()
                     self.navigationController?.pushViewController(profileVC, animated: false)
                 } else {
