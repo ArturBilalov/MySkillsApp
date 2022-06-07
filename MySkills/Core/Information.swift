@@ -25,7 +25,7 @@ class Information {
     
     var titleCalculatorViewConroller2: String = "Матрица судьбы"
     
-    var n1Label: UILabel = {
+    var xLabel: UILabel = {
        let label = UILabel()
         label.text = ""
         label.textAlignment = .center
