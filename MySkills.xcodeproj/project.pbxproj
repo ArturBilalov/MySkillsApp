@@ -7,10 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FE2FE3B4284F344700FB56CE /* CalculatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE2FE3B3284F344700FB56CE /* CalculatorView.swift */; };
 		FE36FD6B284A3B1000C1A220 /* CalculatorViewController2.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE36FD69284A3B1000C1A220 /* CalculatorViewController2.swift */; };
-		FE36FD6C284A3B1000C1A220 /* CalculatorViewController2.xib in Resources */ = {isa = PBXBuildFile; fileRef = FE36FD6A284A3B1000C1A220 /* CalculatorViewController2.xib */; };
-		FED688DA284A18E3000BEDD6 /* dsvwrvedbb.swift in Sources */ = {isa = PBXBuildFile; fileRef = FED688D8284A18E3000BEDD6 /* dsvwrvedbb.swift */; };
-		FED688DB284A18E3000BEDD6 /* ryjtumtumtu.xib in Resources */ = {isa = PBXBuildFile; fileRef = FED688D9284A18E3000BEDD6 /* ryjtumtumtu.xib */; };
 		FEEE13222844FF78003344FD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEEE13212844FF78003344FD /* AppDelegate.swift */; };
 		FEEE13242844FF78003344FD /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEEE13232844FF78003344FD /* SceneDelegate.swift */; };
 		FEEE132C2844FF78003344FD /* MySkills.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = FEEE132A2844FF78003344FD /* MySkills.xcdatamodeld */; };
@@ -39,10 +37,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		FE2FE3B3284F344700FB56CE /* CalculatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorView.swift; sourceTree = "<group>"; };
 		FE36FD69284A3B1000C1A220 /* CalculatorViewController2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorViewController2.swift; sourceTree = "<group>"; };
-		FE36FD6A284A3B1000C1A220 /* CalculatorViewController2.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CalculatorViewController2.xib; sourceTree = "<group>"; };
-		FED688D8284A18E3000BEDD6 /* dsvwrvedbb.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = dsvwrvedbb.swift; path = ../../dsvwrvedbb.swift; sourceTree = "<group>"; };
-		FED688D9284A18E3000BEDD6 /* ryjtumtumtu.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ryjtumtumtu.xib; sourceTree = "<group>"; };
 		FEEE131E2844FF78003344FD /* MySkills.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MySkills.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FEEE13212844FF78003344FD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FEEE13232844FF78003344FD /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -111,7 +107,6 @@
 				FEEE13382845010E003344FD /* TapBarController.swift */,
 				FEEE13212844FF78003344FD /* AppDelegate.swift */,
 				FEEE13232844FF78003344FD /* SceneDelegate.swift */,
-				FED688D9284A18E3000BEDD6 /* ryjtumtumtu.xib */,
 				FEEE132D2844FF7A003344FD /* Assets.xcassets */,
 				FEEE132F2844FF7A003344FD /* LaunchScreen.storyboard */,
 				FEEE13322844FF7A003344FD /* Info.plist */,
@@ -133,8 +128,6 @@
 				FEEE135E28464BA4003344FD /* PhotosViewController.swift */,
 				FEEE136428489173003344FD /* CalculatorViewController1.swift */,
 				FE36FD69284A3B1000C1A220 /* CalculatorViewController2.swift */,
-				FE36FD6A284A3B1000C1A220 /* CalculatorViewController2.xib */,
-				FED688D8284A18E3000BEDD6 /* dsvwrvedbb.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -159,6 +152,7 @@
 			isa = PBXGroup;
 			children = (
 				FEEE134F284644B5003344FD /* PostView.swift */,
+				FE2FE3B3284F344700FB56CE /* CalculatorView.swift */,
 				FEEE136028464BBA003344FD /* ExpandedPhotoCell.swift */,
 				FEEE135528464608003344FD /* ProfileHeaderView.swift */,
 			);
@@ -242,8 +236,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FED688DB284A18E3000BEDD6 /* ryjtumtumtu.xib in Resources */,
-				FE36FD6C284A3B1000C1A220 /* CalculatorViewController2.xib in Resources */,
 				FEEE13312844FF7A003344FD /* LaunchScreen.storyboard in Resources */,
 				FEEE134B28464430003344FD /* News.json in Resources */,
 				FEEE132E2844FF7A003344FD /* Assets.xcassets in Resources */,
@@ -261,6 +253,7 @@
 				FEEE135F28464BA4003344FD /* PhotosViewController.swift in Sources */,
 				FEEE1347284624A9003344FD /* TrafficLightsViewController.swift in Sources */,
 				FEEE134028460133003344FD /* Information.swift in Sources */,
+				FE2FE3B4284F344700FB56CE /* CalculatorView.swift in Sources */,
 				FEEE135B28464B56003344FD /* PhotosTableViewCell.swift in Sources */,
 				FEEE136128464BBA003344FD /* ExpandedPhotoCell.swift in Sources */,
 				FEEE134D28464461003344FD /* News.swift in Sources */,
@@ -271,7 +264,6 @@
 				FEEE135628464608003344FD /* ProfileHeaderView.swift in Sources */,
 				FEEE134928463DE4003344FD /* ProfileViewController.swift in Sources */,
 				FE36FD6B284A3B1000C1A220 /* CalculatorViewController2.swift in Sources */,
-				FED688DA284A18E3000BEDD6 /* dsvwrvedbb.swift in Sources */,
 				FEEE135D28464B74003344FD /* PhotoCell.swift in Sources */,
 				FEEE132C2844FF78003344FD /* MySkills.xcdatamodeld in Sources */,
 				FEEE135328464515003344FD /* Setupable.swift in Sources */,

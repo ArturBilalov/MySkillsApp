@@ -189,9 +189,14 @@ class CalculatorViewController1: UIViewController {
     //, datePickerXConstraint, datePickerTrailingConstraint, datePickerLeadingConstraint, datePickerTopConstraint
     
     @objc func didTapCalculatingButton() {
-        let calculatorVC2 = UIViewController(nibName: "CalculatorViewController2", bundle: nil)
+        let calculatorVC2 = CalculatorViewController2()
         self.navigationController?.pushViewController(calculatorVC2, animated: false)
+//        let calculatorVC2 = UIViewController(nibName: "CalculatorView", bundle: nil)
+//        self.navigationController?.pushViewController(calculatorVC2, animated: false)
     }
+    
+//    et profileVC = ProfileViewController()
+//    self.navigationController?.pushViewController(profileVC, animated: false)
     
     @objc func doneAction() {
         getDateFromPicker()
