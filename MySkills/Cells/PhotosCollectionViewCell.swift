@@ -9,11 +9,11 @@ import UIKit
 
 class PhotosCollectionViewCell: UICollectionViewCell {
     
-   lazy var photoView: UIImageView = {
+    lazy var photoView: UIImageView = {
         let photo = UIImageView()
-       photo.contentMode = .scaleAspectFill
-       photo.translatesAutoresizingMaskIntoConstraints = false
-       photo.clipsToBounds = true
+        photo.contentMode = .scaleAspectFill
+        photo.translatesAutoresizingMaskIntoConstraints = false
+        photo.clipsToBounds = true
         return photo
     }()
     

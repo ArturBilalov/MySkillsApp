@@ -31,7 +31,7 @@ class TapBarController: UITabBarController {
             }
         }
     }
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.setupTapBar()
@@ -53,5 +53,5 @@ class TapBarController: UITabBarController {
             vc.tabBarItem.image = items[index].image
         })
     }
-
+    
 }

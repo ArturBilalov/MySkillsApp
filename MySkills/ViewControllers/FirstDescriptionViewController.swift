@@ -32,10 +32,10 @@ class FirstDescriptionViewController: UIViewController {
         CGSize(width: view.frame.width, height: view.frame.height + 500)
     }
     
-
-
+    
+    
     private lazy var infoLabel1: UILabel = {
-       let label = UILabel()
+        let label = UILabel()
         label.text = infoText.labelForFirstDescriptionViewController1
         label.textAlignment = .natural
         label.lineBreakMode = .byWordWrapping
@@ -48,7 +48,7 @@ class FirstDescriptionViewController: UIViewController {
     }()
     
     private lazy var infoLabel2: UILabel = {
-       let label = UILabel()
+        let label = UILabel()
         label.text = infoText.labelForFirstDescriptionViewController2
         label.textAlignment = .natural
         label.lineBreakMode = .byWordWrapping
@@ -61,7 +61,7 @@ class FirstDescriptionViewController: UIViewController {
     }()
     
     private lazy var infoLabel3: UILabel = {
-       let label = UILabel()
+        let label = UILabel()
         label.text = infoText.labelForFirstDescriptionViewController3
         label.textAlignment = .natural
         label.lineBreakMode = .byWordWrapping
@@ -74,7 +74,7 @@ class FirstDescriptionViewController: UIViewController {
     }()
     
     private lazy var infoLabel4: UILabel = {
-       let label = UILabel()
+        let label = UILabel()
         label.text = infoText.labelForFirstDescriptionViewController4
         label.textAlignment = .natural
         label.lineBreakMode = .byWordWrapping
@@ -93,19 +93,18 @@ class FirstDescriptionViewController: UIViewController {
         stackView.distribution = .fillProportionally
         stackView.spacing = 15
         stackView.layer.cornerRadius = 10
-//        stackView.clipsToBounds = true
         stackView.layer.borderWidth = 0.5
         stackView.layer.borderColor = UIColor.lightGray.cgColor
         return stackView
     }()
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .lightGray
         self.navigationController?.navigationBar.isHidden = false
         setUpView()
     }
-
+    
     
     private func setUpView() {
         self.view.addSubview(myScrollView)
@@ -127,18 +126,13 @@ class FirstDescriptionViewController: UIViewController {
         let scrollViewLeadingConstraint = self.myScrollView.leadingAnchor.constraint(equalTo: self.view.leadingAnchor, constant: 16)
         let scrollViewTrailingConstraint = self.myScrollView.trailingAnchor.constraint(equalTo: self.view.trailingAnchor, constant: -16)
         
-//        let backViewTopConstraint = self.backView.topAnchor.constraint(equalTo: self.myScrollView.topAnchor)
-//        let backViewBottomConstraint = self.backView.bottomAnchor.constraint(equalTo: self.myScrollView.bottomAnchor)
-//        let backViewLeadingConstraint = self.backView.leadingAnchor.constraint(equalTo: self.myScrollView.leadingAnchor)
-//        let backViewTrailingConstraint = self.backView.trailingAnchor.constraint(equalTo: self.myScrollView.trailingAnchor)
-//        let scrollViewCenterXConstraint = self.myScrollView.centerXAnchor.constraint(equalTo: self.view.centerXAnchor)
         
         let infoLabelTopConstraint = self.infoLabelStackView.topAnchor.constraint(equalTo: self.contentView.topAnchor, constant: 16)
-//        let infoLabelCenterXConstraint = self.infoLabelStackView.centerXAnchor.constraint(equalTo: self.contentView.centerXAnchor)
+        //        let infoLabelCenterXConstraint = self.infoLabelStackView.centerXAnchor.constraint(equalTo: self.contentView.centerXAnchor)
         let infoLabelLeadingConstraint = self.infoLabelStackView.leadingAnchor.constraint(equalTo: self.contentView.leadingAnchor)
         let infoLabelTrailingConstraint = self.infoLabelStackView.trailingAnchor.constraint(equalTo: self.contentView.trailingAnchor)
         
         NSLayoutConstraint.activate([ infoLabelTopConstraint, infoLabelLeadingConstraint, infoLabelTrailingConstraint, scrollViewTopConstraint, scrollViewLeadingConstraint, scrollViewTrailingConstraint, scrollViewBottomConstraint].compactMap( {$0} ))
-
-}
+        
+    }
 }

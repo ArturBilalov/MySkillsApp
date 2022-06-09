@@ -14,7 +14,7 @@ protocol ExpandedCellDelegate: AnyObject {
 class ExpandedPhotoCell: UIView {
     weak var delegate: ExpandedCellDelegate?
     var pressButtonCancel = UITapGestureRecognizer()
-
+    
     lazy var imageExpandedCell: UIImageView = {
         let image = UIImageView()
         image.contentMode = .scaleAspectFit
@@ -23,7 +23,7 @@ class ExpandedPhotoCell: UIView {
         image.translatesAutoresizingMaskIntoConstraints = false
         return image
     }()
-
+    
     lazy var buttonCancel: UIImageView = {
         let button = UIImageView()
         button.image = UIImage(systemName: "multiply.square")
@@ -33,22 +33,22 @@ class ExpandedPhotoCell: UIView {
         button.translatesAutoresizingMaskIntoConstraints = false
         return button
     }()
-
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
         self.translatesAutoresizingMaskIntoConstraints = false
         drawSelf()
         setupGesture()
     }
-
+    
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
-
+    
     private func drawSelf() {
         self.addSubview(imageExpandedCell)
         self.addSubview(buttonCancel)
-
+        
         NSLayoutConstraint.activate([
             imageExpandedCell.centerYAnchor.constraint(equalTo: self.centerYAnchor),
             imageExpandedCell.centerXAnchor.constraint(equalTo: self.centerXAnchor),
@@ -60,12 +60,12 @@ class ExpandedPhotoCell: UIView {
             buttonCancel.heightAnchor.constraint(equalToConstant: 30)
         ])
     }
-
+    
     private func setupGesture() {
         pressButtonCancel.addTarget(self, action: #selector(pressedButton(_:)))
         buttonCancel.addGestureRecognizer(pressButtonCancel)
     }
-
+    
     @objc func pressedButton(_ gestureRecognizer: UITapGestureRecognizer) {
         delegate?.pressedButton(view: self)
     }

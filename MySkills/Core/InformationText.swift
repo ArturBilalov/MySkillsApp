@@ -37,17 +37,6 @@ class InformationText {
     var labelForSecondDescriptionViewController3: String = "Далее идёт ячейка с постами про фильмы Сэндлера. При каждом открытии любого из постов мы увеличиваем количество Views. Также при нажатии на Likes мы увеличиваем количество лайков."
     var labelForSecondDescriptionViewController4: String = "Любой из постов можно удалить при помощи свайпа налево."
     
-    
-    
-    
-    
-    
-    var titleForEasySkillsV8iewController: String = "My Skills Application"
-    var titleForEasySkillsVi9ewController: String = "My Skills Application"
-    var titleForEasySkillsVie0wController: String = "My Skills Application"
-    
-    var titleCalculatorViewConroller2: String = "Матрица судьбы"
-
 }
 
 

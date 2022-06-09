@@ -17,7 +17,7 @@ final class PostTableViewCell: UITableViewCell {
     weak var delegate: PostTableViewCellProtocol?
     private var tapLikesGestureRecognizer = UITapGestureRecognizer()
     private var tapPostsGestureRecognizer = UITapGestureRecognizer()
-  
+    
     struct ViewModel: ViewModelProtocol {
         var author, description, image: String
         var likes: Int

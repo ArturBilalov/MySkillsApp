@@ -19,7 +19,7 @@ class LogInViewController: UIViewController, UITextFieldDelegate {
     
     
     private lazy var logoImageView: UIImageView = {
-       let imageView = UIImageView()
+        let imageView = UIImageView()
         imageView.image = UIImage(named: "orig")
         imageView.layer.borderWidth = 3.0
         imageView.layer.borderColor = UIColor.white.cgColor
@@ -30,7 +30,7 @@ class LogInViewController: UIViewController, UITextFieldDelegate {
     }()
     
     private lazy var warningLabel: UILabel = {
-       let label = UILabel()
+        let label = UILabel()
         label.text = "Введите не менее 6 символов"
         label.textColor = .black
         label.isHidden = true
@@ -38,7 +38,7 @@ class LogInViewController: UIViewController, UITextFieldDelegate {
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
     }()
-
+    
     
     private lazy var textFieldStackView: UIStackView = {
         let stackView = UIStackView()
@@ -96,25 +96,25 @@ class LogInViewController: UIViewController, UITextFieldDelegate {
     
     
     private lazy var logInButton: UIButton = {
-       let button = UIButton()
+        let button = UIButton()
         button.setTitle("Log in", for: .normal)
         button.setTitleColor(.white, for: .normal)
         button.layer.cornerRadius = 10
         button.backgroundColor = UIColor(named: "Color")
         button.addTarget(self, action: #selector(self.didTapLogInButton), for: .touchUpInside)
         button.translatesAutoresizingMaskIntoConstraints = false
-    return button
+        return button
     }()
     
     private lazy var descriptionButton: UIButton = {
-       let button = UIButton()
+        let button = UIButton()
         button.setTitle("открыть описание", for: .normal)
         button.setTitleColor(.white, for: .normal)
         button.layer.cornerRadius = 10
         button.backgroundColor = .systemGray3
         button.addTarget(self, action: #selector(self.didTapdescriptionButton), for: .touchUpInside)
         button.translatesAutoresizingMaskIntoConstraints = false
-    return button
+        return button
     }()
     
     private var topButtonConstraint: NSLayoutConstraint?
@@ -189,7 +189,7 @@ class LogInViewController: UIViewController, UITextFieldDelegate {
         self.view.addGestureRecognizer(tapGesture)
     }
     
-     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         self.view.endEditing(true)
         return false
     }
@@ -201,10 +201,10 @@ class LogInViewController: UIViewController, UITextFieldDelegate {
     }
     
     func isValidEmail(userEmail: String) -> Bool {
-            let emailRegEx = "(?:[a-z0-9!#$%\\&'*+/=?\\^_`{|}~-]+(?:\\.[a-z0-9!#$%\\&'*+/=?\\^_`{|}"+"~-]+)*|\"(?:[\\x01-\\x08\\x0b\\x0c\\x0e-\\x1f\\x21\\x23-\\x5b\\x5d-\\"+"x7f]|\\\\[\\x01-\\x09\\x0b\\x0c\\x0e-\\x7f])*\")@(?:(?:[a-z0-9](?:[a-"+"z0-9-]*[a-z0-9])?\\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?|\\[(?:(?:25[0-5"+"]|2[0-4][0-9]|[01]?[0-9][0-9]?)\\.){3}(?:25[0-5]|2[0-4][0-9]|[01]?[0-"+"9][0-9]?|[a-z0-9-]*[a-z0-9]:(?:[\\x01-\\x08\\x0b\\x0c\\x0e-\\x1f\\x21"+"-\\x5a\\x53-\\x7f]|\\\\[\\x01-\\x09\\x0b\\x0c\\x0e-\\x7f])+)\\])"
-            let emailTest = NSPredicate(format:"SELF MATCHES[c] %@", emailRegEx)
-            return emailTest.evaluate(with: userEmail)
-        }
+        let emailRegEx = "(?:[a-z0-9!#$%\\&'*+/=?\\^_`{|}~-]+(?:\\.[a-z0-9!#$%\\&'*+/=?\\^_`{|}"+"~-]+)*|\"(?:[\\x01-\\x08\\x0b\\x0c\\x0e-\\x1f\\x21\\x23-\\x5b\\x5d-\\"+"x7f]|\\\\[\\x01-\\x09\\x0b\\x0c\\x0e-\\x7f])*\")@(?:(?:[a-z0-9](?:[a-"+"z0-9-]*[a-z0-9])?\\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?|\\[(?:(?:25[0-5"+"]|2[0-4][0-9]|[01]?[0-9][0-9]?)\\.){3}(?:25[0-5]|2[0-4][0-9]|[01]?[0-"+"9][0-9]?|[a-z0-9-]*[a-z0-9]:(?:[\\x01-\\x08\\x0b\\x0c\\x0e-\\x1f\\x21"+"-\\x5a\\x53-\\x7f]|\\\\[\\x01-\\x09\\x0b\\x0c\\x0e-\\x7f])+)\\])"
+        let emailTest = NSPredicate(format:"SELF MATCHES[c] %@", emailRegEx)
+        return emailTest.evaluate(with: userEmail)
+    }
     
     @objc private func didTapdescriptionButton() {
         let descriptionVC = FirstDescriptionViewController()
@@ -228,39 +228,39 @@ class LogInViewController: UIViewController, UITextFieldDelegate {
         let trailingLabelConstraint = self.warningLabel.trailingAnchor.constraint(equalTo: self.textFieldStackView.trailingAnchor)
         
         self.topButtonConstraint = self.logInButton.topAnchor.constraint(equalTo: self.warningLabel.bottomAnchor, constant: 16)
-
+        
         let email = isValidEmail(userEmail: infoTextField.text!)
-                if(email == false) {
-                    let alert = UIAlertController(title: "Внимание!", message: "Введён некорректный email", preferredStyle: UIAlertController.Style.alert)
-                    alert.addAction(UIAlertAction(title: "Oк", style: UIAlertAction.Style.default, handler: nil))
-                    self.present(alert, animated: true, completion: nil)
-                }
+        if(email == false) {
+            let alert = UIAlertController(title: "Внимание!", message: "Введён некорректный email", preferredStyle: UIAlertController.Style.alert)
+            alert.addAction(UIAlertAction(title: "Oк", style: UIAlertAction.Style.default, handler: nil))
+            self.present(alert, animated: true, completion: nil)
+        }
         
         let password = validPassword(userPassword: passwordTextField.text!)
-                if(password == false) {
-                    self.warningLabel.isHidden = false
-                    self.scrollView.addSubview(self.warningLabel)
-                    self.topButtonConstraint?.isActive = false
-                    NSLayoutConstraint.activate([topLabelConstraint, leadingLabelConstraint, trailingLabelConstraint, heightLabelConstraint, topButtonConstraint].compactMap( {$0} ))
-                } else {
-                    self.warningLabel.removeFromSuperview()
-                    NSLayoutConstraint.deactivate([topLabelConstraint, leadingLabelConstraint, trailingLabelConstraint, heightLabelConstraint].compactMap( {$0} ))
-                    self.warningLabel.isHidden = true
-                        }
-
-                if self.infoTextField.text == "" {
-                    self.infoTextField.backgroundColor = .systemPink
-                } else if passwordTextField.text == "" {
-                    self.passwordTextField.backgroundColor = .systemPink
-                } else if self.infoTextField.text == "adam@mail.ru" && passwordTextField.text == "123456" {
-                    let profileVC = ProfileViewController()
-                    self.navigationController?.pushViewController(profileVC, animated: false)
-                } else {
-                    let alert = UIAlertController(title: "Внимание!", message: "Введён неверный адрес эл. почты или пароль", preferredStyle: UIAlertController.Style.alert)
-                    alert.addAction(UIAlertAction(title: "Oк", style: UIAlertAction.Style.default, handler: nil))
-                    self.present(alert, animated: true, completion: nil)
-                        }
-            }
+        if(password == false) {
+            self.warningLabel.isHidden = false
+            self.scrollView.addSubview(self.warningLabel)
+            self.topButtonConstraint?.isActive = false
+            NSLayoutConstraint.activate([topLabelConstraint, leadingLabelConstraint, trailingLabelConstraint, heightLabelConstraint, topButtonConstraint].compactMap( {$0} ))
+        } else {
+            self.warningLabel.removeFromSuperview()
+            NSLayoutConstraint.deactivate([topLabelConstraint, leadingLabelConstraint, trailingLabelConstraint, heightLabelConstraint].compactMap( {$0} ))
+            self.warningLabel.isHidden = true
         }
-
         
+        if self.infoTextField.text == "" {
+            self.infoTextField.backgroundColor = .systemPink
+        } else if passwordTextField.text == "" {
+            self.passwordTextField.backgroundColor = .systemPink
+        } else if self.infoTextField.text == "adam@mail.ru" && passwordTextField.text == "123456" {
+            let profileVC = ProfileViewController()
+            self.navigationController?.pushViewController(profileVC, animated: false)
+        } else {
+            let alert = UIAlertController(title: "Внимание!", message: "Введён неверный адрес эл. почты или пароль", preferredStyle: UIAlertController.Style.alert)
+            alert.addAction(UIAlertAction(title: "Oк", style: UIAlertAction.Style.default, handler: nil))
+            self.present(alert, animated: true, completion: nil)
+        }
+    }
+}
+
+

@@ -111,7 +111,7 @@ class PhotosTableViewCell: UITableViewCell {
         NSLayoutConstraint.activate([topConstraint, leadingConstraint, trailingConstraint, bottomConstraint, stackViewTopConstraint, stackViewleadingConstraint, stackViewtrailingConstraint, imageYAnchor, photoCollectionViewHeight, photoCollectionViewConstraint, photoCollectionViewleadingConstraint, photoCollectionViewtrailingConstraint, photoCollectionViewTopConstraint])
     }
     
-     func itemSize(for width: CGFloat, with spacing: CGFloat) -> CGSize {
+    func itemSize(for width: CGFloat, with spacing: CGFloat) -> CGSize {
         let neededWidth = width - 4 * spacing
         let itemWidth = floor(neededWidth / Constant.itemCount)
         return CGSize(width: itemWidth, height: itemWidth)

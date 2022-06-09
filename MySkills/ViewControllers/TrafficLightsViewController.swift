@@ -10,9 +10,9 @@ import UIKit
 class TrafficLightsViewController: UIViewController {
     
     private lazy var infoText = InformationText()
-
-    private lazy var infoLabel3: UILabel = {
-       let label = UILabel()
+    
+    private lazy var infoLabel: UILabel = {
+        let label = UILabel()
         label.text = infoText.labelForTrafficLightsViewController
         label.textAlignment = .natural
         label.lineBreakMode = .byWordWrapping
@@ -25,15 +25,15 @@ class TrafficLightsViewController: UIViewController {
     }()
     
     private lazy var redLightLabel: UILabel = {
-       let label = UILabel()
+        let label = UILabel()
         label.text = "                        "
         label.backgroundColor = .red
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
     }()
-
+    
     private lazy var yellowLightLabel: UILabel = {
-       let label = UILabel()
+        let label = UILabel()
         label.text = "                        "
         label.backgroundColor = .yellow
         label.translatesAutoresizingMaskIntoConstraints = false
@@ -41,7 +41,7 @@ class TrafficLightsViewController: UIViewController {
     }()
     
     private lazy var greenLightLabel: UILabel = {
-       let label = UILabel()
+        let label = UILabel()
         label.text = "                        "
         label.backgroundColor = .green
         label.translatesAutoresizingMaskIntoConstraints = false
@@ -85,18 +85,18 @@ class TrafficLightsViewController: UIViewController {
     
     private func setUpView() {
         self.view.addSubview(labelStackView)
-        self.view.addSubview(infoLabel3)
+        self.view.addSubview(infoLabel)
         self.labelStackView.addArrangedSubview(redLightLabel)
         self.labelStackView.addArrangedSubview(yellowLightLabel)
         self.labelStackView.addArrangedSubview(greenLightLabel)
         self.view.addSubview(myButton)
         
-        let infoLabelTopConstraint = self.infoLabel3.topAnchor.constraint(equalTo: self.view.topAnchor, constant: 100)
-        let infoLabelCenterXConstraint = self.infoLabel3.centerXAnchor.constraint(equalTo: self.view.centerXAnchor)
-        let infoLabelLeadingConstraint = self.infoLabel3.leadingAnchor.constraint(equalTo: self.view.leadingAnchor, constant: 16)
-        let infoLabelTrailingConstraint = self.infoLabel3.trailingAnchor.constraint(equalTo: self.view.trailingAnchor, constant: -16)
+        let infoLabelTopConstraint = self.infoLabel.topAnchor.constraint(equalTo: self.view.topAnchor, constant: 100)
+        let infoLabelCenterXConstraint = self.infoLabel.centerXAnchor.constraint(equalTo: self.view.centerXAnchor)
+        let infoLabelLeadingConstraint = self.infoLabel.leadingAnchor.constraint(equalTo: self.view.leadingAnchor, constant: 16)
+        let infoLabelTrailingConstraint = self.infoLabel.trailingAnchor.constraint(equalTo: self.view.trailingAnchor, constant: -16)
         
-        let labelStackViewTopConstraint = self.labelStackView.topAnchor.constraint(equalTo: self.infoLabel3.bottomAnchor, constant: 50)
+        let labelStackViewTopConstraint = self.labelStackView.topAnchor.constraint(equalTo: self.infoLabel.bottomAnchor, constant: 50)
         let labelStackViewCenterXConstraint = self.labelStackView.centerXAnchor.constraint(equalTo: self.view.centerXAnchor)
         let labelStackViewLeadingConstraint = self.labelStackView.leadingAnchor.constraint(equalTo: self.view.leadingAnchor, constant: 96)
         let labelStackViewTrailingConstraint = self.labelStackView.trailingAnchor.constraint(equalTo: self.view.trailingAnchor, constant: -96)
@@ -108,7 +108,7 @@ class TrafficLightsViewController: UIViewController {
         let topButtonConstraint = self.myButton.topAnchor.constraint(equalTo: self.labelStackView.bottomAnchor, constant: 25)
         
         NSLayoutConstraint.activate([labelStackViewTopConstraint, labelStackViewCenterXConstraint, labelStackViewLeadingConstraint, labelStackViewTrailingConstraint, heightButtonConstraint, buttonTrailingConstraint, buttonLeadingConstraint, topButtonConstraint, labelStackViewHeightConstraint, infoLabelTopConstraint, infoLabelCenterXConstraint, infoLabelLeadingConstraint, infoLabelTrailingConstraint].compactMap( {$0} ))
-
+        
     }
     
     @objc private func didTapmyButton() {
@@ -131,6 +131,6 @@ class TrafficLightsViewController: UIViewController {
             }
         }
     }
-    }
-    
+}
+
 

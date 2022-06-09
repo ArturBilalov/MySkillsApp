@@ -12,7 +12,7 @@ class SecondEasySkillsViewController: UIViewController {
     private lazy var infoText = InformationText()
     
     private lazy var infoLabel1: UILabel = {
-       let label = UILabel()
+        let label = UILabel()
         label.text = infoText.labelForSecondEasySkillsViewController1
         label.textAlignment = .natural
         label.lineBreakMode = .byWordWrapping
@@ -25,7 +25,7 @@ class SecondEasySkillsViewController: UIViewController {
     }()
     
     private lazy var infoLabel2: UILabel = {
-       let label = UILabel()
+        let label = UILabel()
         label.text = infoText.labelForSecondEasySkillsViewController2
         label.textAlignment = .natural
         label.lineBreakMode = .byWordWrapping
@@ -63,7 +63,7 @@ class SecondEasySkillsViewController: UIViewController {
     }()
     
     
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.view.backgroundColor = .lightGray
@@ -79,12 +79,12 @@ class SecondEasySkillsViewController: UIViewController {
         self.stackView.addArrangedSubview(infoLabel1)
         self.stackView.addArrangedSubview(infoLabel2)
         self.stackView.addArrangedSubview(myButton)
-
+        
         let stackViewTopConstraint = self.stackView.topAnchor.constraint(equalTo: self.view.topAnchor, constant: 75)
         let stackViewCenterXConstraint = self.stackView.centerXAnchor.constraint(equalTo: self.view.centerXAnchor)
         let stackViewLeadingConstraint = self.stackView.leadingAnchor.constraint(equalTo: self.view.leadingAnchor, constant: 16)
         let stackViewTrailingConstraint = self.stackView.trailingAnchor.constraint(equalTo: self.view.trailingAnchor, constant: -16)
-
+        
         NSLayoutConstraint.activate([stackViewTopConstraint, stackViewCenterXConstraint, stackViewLeadingConstraint, stackViewTrailingConstraint].compactMap( {$0} ))
     }
     

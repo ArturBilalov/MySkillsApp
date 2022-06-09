@@ -14,7 +14,7 @@ class PostView: UIView {
         var likes: Int
         var views: Int
     }
-
+    
     private lazy var backView: UIView = {
         let view = UIView()
         view.backgroundColor = .white
@@ -22,7 +22,7 @@ class PostView: UIView {
         view.clipsToBounds = true
         return view
     }()
-
+    
     private lazy var authorLabel: UILabel = {
         let label = UILabel()
         label.numberOfLines = 0
@@ -33,7 +33,7 @@ class PostView: UIView {
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
     }()
-
+    
     private lazy var postImageView: UIImageView = {
         let imageView = UIImageView()
         imageView.contentMode = .scaleAspectFill
@@ -42,7 +42,7 @@ class PostView: UIView {
         imageView.setContentCompressionResistancePriority(UILayoutPriority(250), for: .vertical)
         return imageView
     }()
-
+    
     private lazy var descriptionLabel: UILabel = {
         let label = UILabel()
         label.backgroundColor = .clear
@@ -55,7 +55,7 @@ class PostView: UIView {
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
     }()
-
+    
     private lazy var stackView: UIStackView = {
         let stackView = UIStackView()
         stackView.axis = .horizontal
@@ -64,7 +64,7 @@ class PostView: UIView {
         stackView.translatesAutoresizingMaskIntoConstraints = false
         return stackView
     }()
-
+    
     private lazy var likesLabel: UILabel = {
         let label = UILabel()
         label.text  = "Likes: "
@@ -77,7 +77,7 @@ class PostView: UIView {
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
     }()
-
+    
     private lazy var viewsLabel: UILabel = {
         let label = UILabel()
         label.text  = "Views: "
@@ -89,7 +89,7 @@ class PostView: UIView {
         label.setContentCompressionResistancePriority(UILayoutPriority(500), for: .vertical)
         return label
     }()
-
+    
     private lazy var returnButton: UIButton = {
         let button = UIButton()
         let image = UIImage(systemName: "clear")
@@ -105,11 +105,11 @@ class PostView: UIView {
         self.backgroundColor = .white
         self.translatesAutoresizingMaskIntoConstraints = false
     }
-
+    
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
-
+    
     private func setupView() {
         self.addSubview(self.backView)
         self.addSubview(self.returnButton)
@@ -127,32 +127,32 @@ class PostView: UIView {
         let centerYConstraintBackView = self.backView.centerYAnchor.constraint(equalTo: self.centerYAnchor)
         let leadingConstraintBackView = self.backView.leadingAnchor.constraint(equalTo: self.leadingAnchor)
         let trailingConstraintBackView = self.backView.trailingAnchor.constraint(equalTo: self.trailingAnchor)
-
+        
         let topConstraintAuthorLabel = self.authorLabel.topAnchor.constraint(equalTo: self.backView.topAnchor)
         let leadingConstraintAuthorLabel = self.authorLabel.leadingAnchor.constraint(equalTo: self.backView.leadingAnchor, constant: 16)
         let trailingConstraintAuthorLabel = self.authorLabel.trailingAnchor.constraint(equalTo: self.backView.trailingAnchor, constant: -16)
-
+        
         let topConstraintPostImageView = self.postImageView.topAnchor.constraint(equalTo: self.authorLabel.bottomAnchor, constant: 4)
         let leadingConstraintPostImageView = self.postImageView.leadingAnchor.constraint(equalTo: self.backView.leadingAnchor)
         let trailingConstraintPostImageView = self.postImageView.trailingAnchor.constraint(equalTo: self.backView.trailingAnchor)
         let widthPostImageView = self.postImageView.heightAnchor.constraint(equalTo: self.backView.widthAnchor, multiplier: 1.0)
-
+        
         let topConstraintDescriptionLabel = self.descriptionLabel.topAnchor.constraint(equalTo: self.postImageView.bottomAnchor, constant: 16)
         let leadingConstraintDescriptionLabel = self.descriptionLabel.leadingAnchor.constraint(equalTo: self.backView.leadingAnchor, constant: 16)
         let trailingConstraintDescriptionLabel = self.descriptionLabel.trailingAnchor.constraint(equalTo: self.backView.trailingAnchor, constant: -16)
-
+        
         let topConstraintLikeStackView = self.stackView.topAnchor.constraint(equalTo: self.descriptionLabel.bottomAnchor)
         let leadingConstraintLikeStackView = self.stackView.leadingAnchor.constraint(equalTo: self.backView.leadingAnchor, constant: 16)
         let trailingConstraintLikeStackView = self.stackView.trailingAnchor.constraint(equalTo: self.backView.trailingAnchor, constant: -16)
         let bottomConstraintLikeStackView = self.stackView.bottomAnchor.constraint(equalTo: self.backView.bottomAnchor, constant: -16)
-
+        
         let topButtonConstraint = self.returnButton.topAnchor.constraint(equalTo: self.safeAreaLayoutGuide.topAnchor)
         let trailingButtonConstraint = self.returnButton.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -16)
         let heightButtonConstraint = self.returnButton.heightAnchor.constraint(equalToConstant: 28)
         let widthButtonConstraint = self.returnButton.widthAnchor.constraint(equalToConstant: 28)
-
+        
         NSLayoutConstraint.activate([ topConstraintAuthorLabel, topConstraintPostImageView, widthPostImageView, leadingConstraintAuthorLabel, trailingConstraintAuthorLabel, topConstraintDescriptionLabel, leadingConstraintDescriptionLabel, trailingConstraintDescriptionLabel, topConstraintLikeStackView, leadingConstraintLikeStackView, trailingConstraintLikeStackView, bottomConstraintLikeStackView, leadingConstraintPostImageView, trailingConstraintPostImageView, topButtonConstraint, trailingButtonConstraint, heightButtonConstraint, widthButtonConstraint, leadingConstraintBackView, trailingConstraintBackView, centerXConstraintBackView, centerYConstraintBackView
-        ])
+                                    ])
     }
     
     @objc private func didTapButton() {

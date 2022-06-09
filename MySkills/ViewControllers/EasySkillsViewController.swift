@@ -11,10 +11,8 @@ class EasySkillsViewController: UIViewController {
     
     private lazy var infoText = InformationText()
     
-    
-    
     private lazy var titleLabel: UILabel = {
-       let label = UILabel()
+        let label = UILabel()
         label.text = infoText.titleForEasySkillsViewController
         label.textAlignment = .center
         label.layer.cornerRadius = 12
@@ -25,7 +23,7 @@ class EasySkillsViewController: UIViewController {
     }()
     
     private lazy var infoLabel1: UILabel = {
-       let label = UILabel()
+        let label = UILabel()
         label.text = infoText.firstLabelForEasySkillsViewController
         label.textAlignment = .natural
         label.lineBreakMode = .byWordWrapping
@@ -38,7 +36,7 @@ class EasySkillsViewController: UIViewController {
     }()
     
     private lazy var infoLabel2: UILabel = {
-       let label = UILabel()
+        let label = UILabel()
         label.text = infoText.secondLabelForEasySkillsViewController
         label.lineBreakMode = .byWordWrapping
         label.numberOfLines = 0
@@ -75,7 +73,7 @@ class EasySkillsViewController: UIViewController {
     }()
     
     
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .lightGray
@@ -101,12 +99,12 @@ class EasySkillsViewController: UIViewController {
         let topButtonConstraint = self.myButton.topAnchor.constraint(equalTo: self.labelStackView.bottomAnchor, constant: 50)
         
         NSLayoutConstraint.activate([labelStackViewTopConstraint, labelStackViewCenterXConstraint, labelStackViewLeadingConstraint, labelStackViewTrailingConstraint, heightButtonConstraint, buttonTrailingConstraint, buttonLeadingConstraint, topButtonConstraint].compactMap( {$0} ))
-
+        
     }
     
     @objc private func didTapmyButton() {
-    let secondEasySkillsVC = SecondEasySkillsViewController()
-    self.navigationController?.pushViewController(secondEasySkillsVC, animated: false)
+        let secondEasySkillsVC = SecondEasySkillsViewController()
+        self.navigationController?.pushViewController(secondEasySkillsVC, animated: false)
     }
     
 }

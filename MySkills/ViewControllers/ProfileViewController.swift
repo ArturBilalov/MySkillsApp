@@ -29,7 +29,7 @@ class ProfileViewController: UIViewController {
     
     private var dataSource: [News.Post] = []
     
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.fetchPosts { [weak self] posts in
@@ -89,10 +89,10 @@ extension ProfileViewController: UITableViewDataSource, UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if indexPath.row == 0 {
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: "PhotoCell", for: indexPath) as? PhotosTableViewCell else {
-            let cell = tableView.dequeueReusableCell(withIdentifier: "DefaultCell", for: indexPath)
-            return cell
-        }
+            guard let cell = tableView.dequeueReusableCell(withIdentifier: "PhotoCell", for: indexPath) as? PhotosTableViewCell else {
+                let cell = tableView.dequeueReusableCell(withIdentifier: "DefaultCell", for: indexPath)
+                return cell
+            }
             cell.layer.shouldRasterize = true
             cell.layer.rasterizationScale = UIScreen.main.scale
             return cell
@@ -100,14 +100,14 @@ extension ProfileViewController: UITableViewDataSource, UITableViewDelegate {
             guard let cell = tableView.dequeueReusableCell(withIdentifier: "PostCell", for: indexPath) as? PostTableViewCell else {
                 let cell = tableView.dequeueReusableCell(withIdentifier: "DefaultCell", for: indexPath)
                 return cell
-        }
+            }
             cell.delegate = self
-        let post = self.dataSource[indexPath.row - 1]
-        let viewModel = PostTableViewCell.ViewModel(author: post.author, description: post.description, image: post.image, likes: post.likes, views: post.views)
+            let post = self.dataSource[indexPath.row - 1]
+            let viewModel = PostTableViewCell.ViewModel(author: post.author, description: post.description, image: post.image, likes: post.likes, views: post.views)
             cell.setup(with: viewModel)
-        return cell
+            return cell
+        }
     }
-}
     
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         return ProfileHeaderView()
@@ -117,7 +117,7 @@ extension ProfileViewController: UITableViewDataSource, UITableViewDelegate {
         return 250
     }
     
-
+    
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         if indexPath.row == 0 {
             let photoVC = PhotosViewController()
@@ -148,23 +148,23 @@ extension ProfileViewController: PostTableViewCellProtocol {
         let indexPath = IndexPath(row: index, section: 0)
         self.dataSource[indexPath.row - 1].views += 1
         let post = self.dataSource[indexPath.row - 1]
-
+        
         let viewModel = PostView.ViewModel(
             author: post.author, description: post.description, image: post.image, likes: post.likes, views: post.views)
         largePostView.setup(with: viewModel)
         self.view.addSubview(largePostView)
         largePostView.translatesAutoresizingMaskIntoConstraints = false
-
+        
         NSLayoutConstraint.activate([
             largePostView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
             largePostView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
             largePostView.bottomAnchor.constraint(equalTo: view.bottomAnchor),
             largePostView.topAnchor.constraint(equalTo: view.topAnchor)
         ])
-
+        
         self.tableView.reloadRows(at: [indexPath], with: .fade)
     }
-
+    
     func tapLikes(cell: PostTableViewCell) {
         guard let index = self.tableView.indexPath(for: cell)?.row else { return }
         let indexPath = IndexPath(row: index, section: 0)

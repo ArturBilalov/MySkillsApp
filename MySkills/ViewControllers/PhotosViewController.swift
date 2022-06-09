@@ -93,31 +93,31 @@ extension PhotosViewController: UICollectionViewDataSource, UICollectionViewDele
     
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-            let expandedCell = ExpandedPhotoCell()
-            expandedCell.delegate = self
-            self.view.addSubview(expandedCell)
-            expandedCell.imageExpandedCell.image = images[indexPath.item]
-            navigationController?.navigationBar.isHidden = true
-            NSLayoutConstraint.activate([
-                expandedCell.leadingAnchor.constraint(equalTo: view.leadingAnchor),
-                expandedCell.trailingAnchor.constraint(equalTo: view.trailingAnchor),
-                expandedCell.topAnchor.constraint(equalTo: view.topAnchor),
-                expandedCell.bottomAnchor.constraint(equalTo: view.bottomAnchor)
-            ])
-            UIView.animate(withDuration: 0.1, animations: {
-                self.view.layoutIfNeeded()
-            }) { _ in
-                UIView.animate(withDuration: 0.3) {
-                    expandedCell.buttonCancel.alpha = 1
-                    expandedCell.backgroundColor = .black.withAlphaComponent(0.8)
-                }
+        let expandedCell = ExpandedPhotoCell()
+        expandedCell.delegate = self
+        self.view.addSubview(expandedCell)
+        expandedCell.imageExpandedCell.image = images[indexPath.item]
+        navigationController?.navigationBar.isHidden = true
+        NSLayoutConstraint.activate([
+            expandedCell.leadingAnchor.constraint(equalTo: view.leadingAnchor),
+            expandedCell.trailingAnchor.constraint(equalTo: view.trailingAnchor),
+            expandedCell.topAnchor.constraint(equalTo: view.topAnchor),
+            expandedCell.bottomAnchor.constraint(equalTo: view.bottomAnchor)
+        ])
+        UIView.animate(withDuration: 0.1, animations: {
+            self.view.layoutIfNeeded()
+        }) { _ in
+            UIView.animate(withDuration: 0.3) {
+                expandedCell.buttonCancel.alpha = 1
+                expandedCell.backgroundColor = .black.withAlphaComponent(0.8)
             }
         }
     }
+}
 
-    extension PhotosViewController: ExpandedCellDelegate {
-        func pressedButton(view: ExpandedPhotoCell) {
-            view.removeFromSuperview()
-            navigationController?.navigationBar.isHidden = false
-        }
+extension PhotosViewController: ExpandedCellDelegate {
+    func pressedButton(view: ExpandedPhotoCell) {
+        view.removeFromSuperview()
+        navigationController?.navigationBar.isHidden = false
     }
+}
