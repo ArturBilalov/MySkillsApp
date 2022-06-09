@@ -12,6 +12,7 @@ class LogInViewController: UIViewController, UITextFieldDelegate {
     private lazy var scrollView: UIScrollView = {
         let scrollView = UIScrollView()
         scrollView.translatesAutoresizingMaskIntoConstraints = false
+        scrollView.backgroundColor = .lightGray
         return scrollView
     }()
     

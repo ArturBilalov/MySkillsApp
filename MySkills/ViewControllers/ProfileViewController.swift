@@ -42,9 +42,11 @@ class ProfileViewController: UIViewController {
     
     private func setupNavigationBar() {
         self.tabBarController?.tabBar.isHidden = false
-        self.navigationController?.navigationBar.isHidden = true
- self.navigationItem.title = "Profile"
-        }
+        self.navigationController?.navigationBar.isHidden = false
+        self.navigationItem.title = "посмотреть описание ->"
+        let myButton = UIBarButtonItem(image: UIImage(systemName: "list.bullet.rectangle.fill"), style: .plain, target: self, action: #selector(didTapDescriptionButton))
+        self.navigationItem.rightBarButtonItem = myButton
+    }
     
     private func setupView() {
         self.view.addSubview(self.tableView)
@@ -55,6 +57,12 @@ class ProfileViewController: UIViewController {
         let bottomConstraint = self.tableView.bottomAnchor.constraint(equalTo: self.view.bottomAnchor)
         
         NSLayoutConstraint.activate([topConstraint, leadingConstraint, trailingConstraint, bottomConstraint])
+    }
+    
+    @objc private func didTapDescriptionButton() {
+        let descriptionVC = SecondDescriptionViewController()
+        self.navigationController?.pushViewController(descriptionVC, animated: false)
+        self.navigationItem.title = ""
     }
     
     private func fetchPosts(completion: @escaping ([News.Post]) -> Void) {

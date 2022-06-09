@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		FE2FE3BA284F7BF500FB56CE /* FirstDescriptionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE2FE3B9284F7BF500FB56CE /* FirstDescriptionViewController.swift */; };
+		FE857A792851CF4400BCCD45 /* SecondDescriptionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE857A782851CF4400BCCD45 /* SecondDescriptionViewController.swift */; };
 		FEEE13222844FF78003344FD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEEE13212844FF78003344FD /* AppDelegate.swift */; };
 		FEEE13242844FF78003344FD /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEEE13232844FF78003344FD /* SceneDelegate.swift */; };
 		FEEE132C2844FF78003344FD /* MySkills.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = FEEE132A2844FF78003344FD /* MySkills.xcdatamodeld */; };
@@ -36,6 +37,7 @@
 
 /* Begin PBXFileReference section */
 		FE2FE3B9284F7BF500FB56CE /* FirstDescriptionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstDescriptionViewController.swift; sourceTree = "<group>"; };
+		FE857A782851CF4400BCCD45 /* SecondDescriptionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondDescriptionViewController.swift; sourceTree = "<group>"; };
 		FEEE131E2844FF78003344FD /* MySkills.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MySkills.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FEEE13212844FF78003344FD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FEEE13232844FF78003344FD /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -121,6 +123,7 @@
 				FEEE1346284624A9003344FD /* TrafficLightsViewController.swift */,
 				FEEE133D2845066A003344FD /* LogInViewController.swift */,
 				FE2FE3B9284F7BF500FB56CE /* FirstDescriptionViewController.swift */,
+				FE857A782851CF4400BCCD45 /* SecondDescriptionViewController.swift */,
 				FEEE134828463DE4003344FD /* ProfileViewController.swift */,
 				FEEE135E28464BA4003344FD /* PhotosViewController.swift */,
 			);
@@ -265,6 +268,7 @@
 				FE2FE3BA284F7BF500FB56CE /* FirstDescriptionViewController.swift in Sources */,
 				FEEE1350284644B5003344FD /* PostView.swift in Sources */,
 				FEEE13242844FF78003344FD /* SceneDelegate.swift in Sources */,
+				FE857A792851CF4400BCCD45 /* SecondDescriptionViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -13,7 +13,6 @@ class FirstDescriptionViewController: UIViewController {
     
     private lazy var myScrollView: UIScrollView = {
         let scrollView = UIScrollView()
-//        scrollView.isScrollEnabled = true
         scrollView.backgroundColor = .lightGray
         scrollView.translatesAutoresizingMaskIntoConstraints = false
         scrollView.contentSize = contentSize
@@ -125,8 +124,8 @@ class FirstDescriptionViewController: UIViewController {
         
         let scrollViewTopConstraint = self.myScrollView.topAnchor.constraint(equalTo: self.view.topAnchor)
         let scrollViewBottomConstraint = self.myScrollView.bottomAnchor.constraint(equalTo: self.view.bottomAnchor)
-        let scrollViewLeadingConstraint = self.myScrollView.leadingAnchor.constraint(equalTo: self.view.leadingAnchor)
-        let scrollViewTrailingConstraint = self.myScrollView.trailingAnchor.constraint(equalTo: self.view.trailingAnchor)
+        let scrollViewLeadingConstraint = self.myScrollView.leadingAnchor.constraint(equalTo: self.view.leadingAnchor, constant: 16)
+        let scrollViewTrailingConstraint = self.myScrollView.trailingAnchor.constraint(equalTo: self.view.trailingAnchor, constant: -16)
         
 //        let backViewTopConstraint = self.backView.topAnchor.constraint(equalTo: self.myScrollView.topAnchor)
 //        let backViewBottomConstraint = self.backView.bottomAnchor.constraint(equalTo: self.myScrollView.bottomAnchor)

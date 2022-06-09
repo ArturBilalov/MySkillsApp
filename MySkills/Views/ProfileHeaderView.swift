@@ -44,6 +44,7 @@ class ProfileHeaderView: UIView, UITextFieldDelegate {
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
     }()
+    
 
     private lazy var statusLabel: UILabel = {
         let label = UILabel()
