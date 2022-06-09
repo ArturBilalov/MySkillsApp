@@ -11,9 +11,9 @@ class SecondEasySkillsViewController: UIViewController {
     
     private lazy var infoText = InformationText()
     
-    private lazy var infoLabel3: UILabel = {
+    private lazy var infoLabel1: UILabel = {
        let label = UILabel()
-        label.text = infoText.labelForSecondEasySkillsViewController
+        label.text = infoText.labelForSecondEasySkillsViewController1
         label.textAlignment = .natural
         label.lineBreakMode = .byWordWrapping
         label.numberOfLines = 0
@@ -24,7 +24,20 @@ class SecondEasySkillsViewController: UIViewController {
         return label
     }()
     
-    private lazy var myButton1: UIButton = {
+    private lazy var infoLabel2: UILabel = {
+       let label = UILabel()
+        label.text = infoText.labelForSecondEasySkillsViewController2
+        label.textAlignment = .natural
+        label.lineBreakMode = .byWordWrapping
+        label.numberOfLines = 0
+        label.layer.cornerRadius = 12
+        label.textColor = .black
+        label.font = UIFont(name: "Helvetica-Regular", size: 14)
+        label.translatesAutoresizingMaskIntoConstraints = false
+        return label
+    }()
+    
+    private lazy var myButton: UIButton = {
         let button = UIButton()
         button.setTitle("Перейти к игре <<Cветофор>>", for: .normal)
         button.setTitleColor(.white, for: .normal)
@@ -63,10 +76,11 @@ class SecondEasySkillsViewController: UIViewController {
     
     private func setUpView() {
         self.view.addSubview(stackView)
-        self.stackView.addArrangedSubview(infoLabel3)
-        self.stackView.addArrangedSubview(myButton1)
+        self.stackView.addArrangedSubview(infoLabel1)
+        self.stackView.addArrangedSubview(infoLabel2)
+        self.stackView.addArrangedSubview(myButton)
 
-        let stackViewTopConstraint = self.stackView.topAnchor.constraint(equalTo: self.view.topAnchor, constant: 150)
+        let stackViewTopConstraint = self.stackView.topAnchor.constraint(equalTo: self.view.topAnchor, constant: 75)
         let stackViewCenterXConstraint = self.stackView.centerXAnchor.constraint(equalTo: self.view.centerXAnchor)
         let stackViewLeadingConstraint = self.stackView.leadingAnchor.constraint(equalTo: self.view.leadingAnchor, constant: 16)
         let stackViewTrailingConstraint = self.stackView.trailingAnchor.constraint(equalTo: self.view.trailingAnchor, constant: -16)

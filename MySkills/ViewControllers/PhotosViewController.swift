@@ -59,7 +59,7 @@ class PhotosViewController: UIViewController {
         super.viewWillAppear(animated)
         self.tabBarController?.tabBar.isHidden = true
         self.navigationController?.navigationBar.isHidden = false
-        self.navigationItem.title = "Photo Gallery"
+        self.navigationItem.title = "Фильмография"
     }
     
     private func itemSize(for width: CGFloat, with spacing: CGFloat) -> CGSize {

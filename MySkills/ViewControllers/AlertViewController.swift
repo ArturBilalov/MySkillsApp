@@ -95,7 +95,7 @@ class AlertViewController: UIViewController {
     }
     
     @objc private func didTapAlertButton() {
-        let alert = UIAlertController (title: "Внимание", message: "Вы уверены?", preferredStyle: .alert)
+        let alert = UIAlertController (title: "Внимание", message: "Вы уверены что хотите закрыть это окно? (если нажмёте ``нет`` оно всё равно закроется :) )", preferredStyle: .alert)
         let yesButton = UIAlertAction (title: "Да", style: .default, handler: {action in print ("Да")})
         let noButton = UIAlertAction (title: "Нет", style: .default, handler: {action in print ("Нет")})
         alert.addAction(yesButton)
