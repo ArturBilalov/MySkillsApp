@@ -17,6 +17,7 @@ class PhotosCollectionViewCell: UICollectionViewCell {
         return photo
     }()
     
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
         self.contentView.addSubview(self.photoView)
